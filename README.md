@@ -3,6 +3,7 @@
 ## 12/11/2025
 <details>
   <summary> Setting up the environment on Codespace </summary>
+  
 - Codespace creation :
 <p align="center">
 <img width="496" height="342" alt="image" src="https://github.com/user-attachments/assets/ec58ede0-7248-4131-9db5-c20758739dc5" />
