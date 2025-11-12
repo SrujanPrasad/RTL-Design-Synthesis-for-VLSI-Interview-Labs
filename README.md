@@ -39,7 +39,7 @@
   
 - **RTL design** simulator is a tool used for verifying the functionality of the design.
 - **Design** is the actual module that is implemented, whereas the **testbench** is for verifying the design by considering various test cases.
-- In this course, the simulator used is "**iverilog**".
+- In this course, the simulator used is "**iverilog**" and the waveform viewer is the "**gtkwave**".
 - Iverilog-based simulation flow :
   <p align="center"> <img width="838" height="417" alt="image" src="https://github.com/user-attachments/assets/8027cbb8-3c6c-4ebb-a015-a056333254cc" /> </p>
 
