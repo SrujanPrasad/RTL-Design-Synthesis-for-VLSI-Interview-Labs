@@ -1,6 +1,5 @@
 # RTL-Design-Synthesis-for-VLSI-Interview-Labs
 
-## 12/11/2025
 <details>
   <summary> Setting up the environment on Codespace </summary>
   
