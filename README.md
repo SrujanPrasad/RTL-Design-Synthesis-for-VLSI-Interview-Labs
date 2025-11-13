@@ -96,4 +96,60 @@
   -  .lib is the collection/bucket of all the logic cells. (AND, OR, NOT,
   <p align="center"><img width="895" height="607" alt="image" src="https://github.com/user-attachments/assets/20f16684-c757-4f85-aef9-1cbd9d5a2589" /></p>
 
+  - To ensure that there are no hold issues in the circuit, we need cells that work slowly.
+
+   ## Lecture-6: SKY130RTL D1SK3 L3 introduction to logic synthesis part2
+
+  - **Setup time** is the time before the clock edge at which the data remains stable.
+  - **Hold time** is the time after the clock edge at which the data remains stable.
+  - Load in the digital circuits are nothing but the capacitances.
+  - Faster charging/discharging with the lesser cell delay.
+  - Wide transistors - more area and power but less delay, whereas narrow transistors- less area and less power but more delay.
+
+  <p align="center"><img width="906" height="662" alt="image" src="https://github.com/user-attachments/assets/6e1fc570-12b9-4ddd-a696-27f3cbc48a31" /></p>
+
+  ## Lecture-6: SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1
+
+  Commands to run :
+  ```
+  cd verilog_files
+  ls
+  ```
+  ```
+  yosys
+  ```
+  ```
+  yosys> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  ```
+  ```
+  yosys > read_verilog good_mux.v
+  ```
+  ```
+  yosys > synth -top good_mux
+  ```
+  <p align="center"><img width="1918" height="916" alt="image" src="https://github.com/user-attachments/assets/32fa8e4e-4561-48d2-b48c-7f2ccd9d8833" /></p>
+
+  <p align="center"><img width="990" height="372" alt="image" src="https://github.com/user-attachments/assets/9d8bb860-b25c-4c49-a163-d1695669c188" /></p>
+
+  ```
+  abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  ```
+  The above code (RTL) will be realised in terms of the standard cells from the library.
+
+  ```
+  show
+  ```
+  The equivalent netlist will be opened.
+
+  <p align="center"><img width="1911" height="622" alt="image" src="https://github.com/user-attachments/assets/0d093de1-8f57-4436-b713-953afaf0885c" /></p>
+
+  <p align="center"><img width="1918" height="708" alt="image" src="https://github.com/user-attachments/assets/b3a2d1e3-bf0c-4e48-a41e-eb506039386b" /></p>
+  
+
+
+  
+
+
+  
+
     
