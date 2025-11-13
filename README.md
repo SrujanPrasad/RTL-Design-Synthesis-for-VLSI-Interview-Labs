@@ -44,5 +44,50 @@
   <p align="center"> <img width="838" height="417" alt="image" src="https://github.com/user-attachments/assets/8027cbb8-3c6c-4ebb-a015-a056333254cc" /> </p>
 
   ## Lecture-1: SKY130RTL D1SK2 L1 Lab1 introduction to lab
+  Installation and cloning of all the necessary repositories required for running the labs. A folder named vsdrtlworkshop is created, and the sky130RTLSynthesisAndDesign repository is cloned into it.
 
-  
+  <p align="center"> <img width="1918" height="917" alt="image" src="https://github.com/user-attachments/assets/25a2f94e-867d-45f0-b1ca-9f98a97c0932" /> </p>
+
+  ## Lecture-2: SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1
+
+  In this lab a good_mux.v is simulated and code is as follows :
+
+  ```
+  iverilog good_mux.v tb_good_mux.v
+  ```
+
+  An a.out file will be created
+
+  ```
+  ./a.out
+  ```
+
+  to view the waveforms on gtkwave :
+
+  ```
+  gtkwave tb_good_mux.vcd
+  ```
+
+  VCD stands for "**value change dump**"
+
+  The results are as follows :
+
+  <p align="center"><img width="1916" height="553" alt="image" src="https://github.com/user-attachments/assets/12897415-a163-4b8f-9648-24d24eeaf3a1" /></p>
+
+  <p align="center"><img width="1917" height="918" alt="image" src="https://github.com/user-attachments/assets/a4e3ac22-84c1-4e68-b2ab-85ce11b5e765" /></p>
+
+  ## Lecture-3: SKY130RTL D1SK2 L3 Lab2 Introduction iverilog gtkwave part2
+  To open the code editor :
+  ```
+  gvim tb_good_mux.v -o good_mux.v
+  ```
+  <p align="center"><img width="1917" height="598" alt="image" src="https://github.com/user-attachments/assets/537d2470-1d46-4a71-ac06-3399eab31002" /></p>
+  <p align="center"><img width="1917" height="910" alt="image" src="https://github.com/user-attachments/assets/df150ab4-2cb6-4fe4-8824-f7281cc2b598" /></p>
+
+  ## Lecture-4:SKY130RTL D1SK3 L1 Introduction to yosys
+  - **Synthesizer** is a tool used for converting the RTL code into the netlist.
+  - The synthesiser tool used here is **"yosys**.
+
+  <p align="center"><img width="1870" height="977" alt="image" src="https://github.com/user-attachments/assets/45c79362-888b-4d9c-a13a-205d85e860e7" /></p>
+
+    
