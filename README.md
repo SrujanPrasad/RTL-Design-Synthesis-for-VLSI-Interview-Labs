@@ -180,7 +180,43 @@
   </details>
   
   <details>
-    <summary>Day-2</summary>
+    <summary>DAY-2</summary>
+    
+   ## Lecture-10: SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1
+
+  ```
+  gvim ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  ```
+  <p align="center"><img width="1913" height="936" alt="image" src="https://github.com/user-attachments/assets/0f4a0e6a-f729-41cb-9fc8-14939b7f5fd3" /></p>
+
+  - sky130 is the library.
+  - tt stands for typical process.
+  - 025C is the temperature. (PVT - Process Variation Temperature -determines whether the silicon works faster or slower)
+  - 1v80 indicates the voltage.
+
+   ## Lecture-11: SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2
+
+  - CMOS technology.
+  - The delay model is a  look-up table.
+  - capacitance, resistance, inductance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </details>
 
 
