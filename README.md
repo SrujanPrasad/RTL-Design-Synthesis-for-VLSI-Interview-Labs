@@ -177,7 +177,8 @@
 
    <p align="center"><img width="1918" height="945" alt="image" src="https://github.com/user-attachments/assets/ac49a929-6844-49c0-8c32-16549e3ca720" /></p>
 
-
+  </details>
+  
 
 
 
