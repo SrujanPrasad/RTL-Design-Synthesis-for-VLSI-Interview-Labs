@@ -146,8 +146,9 @@
   <p align="center"><img width="1918" height="708" alt="image" src="https://github.com/user-attachments/assets/b3a2d1e3-bf0c-4e48-a41e-eb506039386b" /></p>
   
    ## Lecture-7: SKY130RTL D1SK4 L2 Lab3 Yosys 1 good mux Part2
+   Here, the sky130_fd_sc_hd_mux2_1 standard cell library is used. with three input signals for i0, i1 and sel and one output signal y.
+  <p align="center"><img width="888" height="341" alt="image" src="https://github.com/user-attachments/assets/81e5ca6a-4cf1-42ea-8fb5-9984e55efd4e" /></p>
 
-  
 
   
 
