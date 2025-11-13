@@ -165,6 +165,20 @@
 
    <p align="center"><img width="1918" height="946" alt="image" src="https://github.com/user-attachments/assets/e9cb9c74-2d0a-43b1-9efb-299a803e7cd9" /></p>
 
+    ```
+   yosys > write_verilog -noattr good_mux_netlist.v
+   ```
+
+   ```
+   yosys > !gvim good_mux_netlist.v
+   ```
+    
+   <p align="center"><img width="956" height="248" alt="image" src="https://github.com/user-attachments/assets/84bc9823-c701-4167-aeb3-8b4d3cd3fa9c" /></p>
+
+   <p align="center"><img width="1918" height="945" alt="image" src="https://github.com/user-attachments/assets/ac49a929-6844-49c0-8c32-16549e3ca720" /></p>
+
+
+
 
 
    
