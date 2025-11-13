@@ -108,7 +108,7 @@
 
   <p align="center"><img width="906" height="662" alt="image" src="https://github.com/user-attachments/assets/6e1fc570-12b9-4ddd-a696-27f3cbc48a31" /></p>
 
-  ## Lecture-6: SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1
+  ## Lecture-7: SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1
 
   Commands to run :
   ```
@@ -145,11 +145,31 @@
 
   <p align="center"><img width="1918" height="708" alt="image" src="https://github.com/user-attachments/assets/b3a2d1e3-bf0c-4e48-a41e-eb506039386b" /></p>
   
-   ## Lecture-7: SKY130RTL D1SK4 L2 Lab3 Yosys 1 good mux Part2
+   ## Lecture-8: SKY130RTL D1SK4 L2 Lab3 Yosys 1 good mux Part2
    Here, the sky130_fd_sc_hd_mux2_1 standard cell library is used. with three input signals for i0, i1 and sel and one output signal y.
   <p align="center"><img width="888" height="341" alt="image" src="https://github.com/user-attachments/assets/81e5ca6a-4cf1-42ea-8fb5-9984e55efd4e" /></p>
 
+   ## Lecture-9: SKY130RTL D1SK4 L2 Lab3 Yosys 1 good mux Part2
 
+   To open the netlist file
+
+   ```
+   yosys > write_verilog good_mux_netlist.v
+   ```
+
+   ```
+   yosys > !gvim good_mux_netlist.v
+   ```
+
+   <p align="center"><img width="1918" height="907" alt="image" src="https://github.com/user-attachments/assets/151a2ec8-2393-4a45-9a22-fdcd896f24b0" /></p>
+
+   <p align="center"><img width="1918" height="946" alt="image" src="https://github.com/user-attachments/assets/e9cb9c74-2d0a-43b1-9efb-299a803e7cd9" /></p>
+
+
+
+   
+    
+    
   
 
 
