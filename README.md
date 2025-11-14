@@ -358,7 +358,45 @@
       <p align="center"><img width="1918" height="947" alt="image" src="https://github.com/user-attachments/assets/5b9c5ed3-b3f5-403a-a1d7-8566cb99d057" /></p>
 
 
+    ## Lecture-18: SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2
 
+    - Asynchronous reset
+   
+      ```
+      yosys
+      yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > read_verilog dff_asyncres.v
+      yosys > synth -top dff_asyncres
+      yosys > dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      ```
+      <p align="center"><img width="858" height="333" alt="image" src="https://github.com/user-attachments/assets/8f17812d-ecbf-4d1f-ad71-e00732d78542" /></p>
+
+      ```
+      yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > show
+      ```
+      <p align="center"><img width="1918" height="988" alt="image" src="https://github.com/user-attachments/assets/802c5d19-b98c-4552-bb08-0310e8cd7711" /></p>
+
+    - Asynchronous set
+   
+      ```
+      yosys
+      yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > read_verilog dff_async_set.v
+      yosys > synth -top dff_async_set
+      yosys > dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      ```
+      <p align="center"><img width="792" height="297" alt="image" src="https://github.com/user-attachments/assets/9d1ac1bd-b126-4a1d-afab-9a640416cdfa" /></p>
+
+      ```
+      yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > show
+      ```
+      <p align="center"><img width="1917" height="962" alt="image" src="https://github.com/user-attachments/assets/61b4e3c3-0fbb-45a7-8b29-1092db5442b5" /></p>
+
+
+
+    
 
     
 
