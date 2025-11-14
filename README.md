@@ -318,6 +318,8 @@
       begin
         if(rst)
           q<=1'b0;
+      //if(set)
+          //q<=1'b1;
         else
           q<=d;
       end
@@ -330,12 +332,32 @@
       begin
         if(rst)
           q<=1'b0;
+      //if(set)
+          //q<=1'b1;
         else
           q<=d;
       end
     endmodule
       ```
-    
+
+    ## Lecture-17: SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1
+
+    To simulate all the designs :
+
+    - Asynchronous reset : 
+      <p align="center"><img width="1918" height="611" alt="image" src="https://github.com/user-attachments/assets/badd4da5-84cf-456a-b2da-76b57957fa47" /></p>
+      <p align="center"> <img width="1916" height="946" alt="image" src="https://github.com/user-attachments/assets/7946720e-dcdb-46c2-bb2c-717d667c68ea" /></p>
+
+    - Asynchronous set :
+
+      <p align="center"><img width="1918" height="618" alt="image" src="https://github.com/user-attachments/assets/e4770bc7-a8f4-4ef9-93e0-8498c247cadb" /></p>
+      <p align="center"><img width="1918" height="950" alt="image" src="https://github.com/user-attachments/assets/2ca82aa0-e542-4005-91af-b674d67ead88" /></p>
+
+    - Synchronous reset : 
+      <p align="center"><img width="1918" height="682" alt="image" src="https://github.com/user-attachments/assets/c9aa14fb-ea2c-42dc-8fc1-1705b275de1e" /></p>
+      <p align="center"><img width="1918" height="947" alt="image" src="https://github.com/user-attachments/assets/5b9c5ed3-b3f5-403a-a1d7-8566cb99d057" /></p>
+
+
 
 
     
