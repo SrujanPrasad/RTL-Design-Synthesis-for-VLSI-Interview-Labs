@@ -205,7 +205,14 @@
     ```
     se nu
     ```
-  - 
+  - Consider the following example of **a2111o** :
+
+    ```
+    : sp ../lib/sky130_fd_sc_hd__a2111o.behavioral.v
+    ```
+
+    <p align="center"><img width="1918" height="913" alt="image" src="https://github.com/user-attachments/assets/ecf263ff-d256-4afc-8e45-838fd42a0618" /></p>
+
 
 
 
