@@ -199,6 +199,13 @@
   - CMOS technology.
   - The delay model is a  look-up table.
   - capacitance, resistance, inductance.
+  - unit of time is in **ns**.
+  - .lib is the bucket of all the standard cells.
+  - To enable line numbers, the command required is  :
+    ```
+    se nu
+    ```
+  - 
 
 
 
