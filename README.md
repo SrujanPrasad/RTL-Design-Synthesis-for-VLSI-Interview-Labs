@@ -227,7 +227,54 @@
     <p align="center"><img width="1917" height="936" alt="image" src="https://github.com/user-attachments/assets/023414ce-e31d-4d49-ab16-fd5fd9c56ca3" /></p>
 
 
+    ## Lecture-13: SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1
+
+    The file used in this lab is the multiple_modules.v
+
+    ```
+    cd verilog_files
+    gvim multiple_modules.v
+    ```
+
+    <p align="center"> <img width="1250" height="622" alt="image" src="https://github.com/user-attachments/assets/722ea4fd-37f5-4843-8ffe-dc6568daf95f" /> </p>
+
+    to run yosys for the multiple_modules.v file
+
+    ```
+    cd verilog_files
+    yosys
+    ```
+
+    ```
+    yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+    yosys > read_verilog multiple_modules.v
+    yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+    ```
+
+    <p align="center"> <img width="783" height="815" alt="image" src="https://github.com/user-attachments/assets/ae77278f-ae0c-4d36-8ff4-0c9e4e21ad1d" /></p>
+    <p align="center"><img width="1918" height="908" alt="image" src="https://github.com/user-attachments/assets/a0542d59-14ff-47af-b564-9dbdd26ef9c0" /></p>
+
+
+    since there are multiple modules :
+    ```
+    show multiple_modules
+    ```
+    <p align="center"><img width="1918" height="948" alt="image" src="https://github.com/user-attachments/assets/f9ee3021-670a-4752-bdae-9e3adce6afaa" /></p>
+
+    To write the same :
+
+    ```
+    yosys > write_verilog -noattr multiple_modules_hier.v
+    yosys > !gvim multiple_modules_hier.v
+    ```
+
+    <p align="center"> <img width="1917" height="962" alt="image" src="https://github.com/user-attachments/assets/2559a35f-bb24-4241-a5cd-957710b21f45" /></p>
+
     
+
+
+    
+
     
 
 
