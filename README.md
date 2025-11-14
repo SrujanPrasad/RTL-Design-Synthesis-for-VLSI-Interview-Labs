@@ -394,6 +394,22 @@
       ```
       <p align="center"><img width="1917" height="962" alt="image" src="https://github.com/user-attachments/assets/61b4e3c3-0fbb-45a7-8b29-1092db5442b5" /></p>
 
+    -  Synchronous set
+   
+      ```
+      yosys
+      yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > read_verilog dff_syncres.v
+      yosys > synth -top dff_syncres
+      yosys > dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      ```
+      <p align="center"><img width="567" height="297" alt="image" src="https://github.com/user-attachments/assets/a9ed02bd-2999-4863-b615-64fbe65aa64b" /></p>
+
+      ```
+      yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > show
+      ```
+      <p align="center"><img width="1918" height="957" alt="image" src="https://github.com/user-attachments/assets/68599c2f-0ee4-4a00-8e4b-d245713d789f" /></p>
 
 
     
