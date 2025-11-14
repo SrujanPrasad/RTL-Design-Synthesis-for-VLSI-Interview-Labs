@@ -270,6 +270,23 @@
 
     <p align="center"> <img width="1917" height="962" alt="image" src="https://github.com/user-attachments/assets/2559a35f-bb24-4241-a5cd-957710b21f45" /></p>
 
+  - NAND is preferred because of the stacked nMOS (two nMOS in series) over NOR (having stacked pMOS, which is bad).
+ 
+  ## Lecture-14: SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2
+
+  - To flatten out the netlist :
+    ```
+    yosys > flatten
+    yosys > write_verilog -noattr multiple_modules.flat.v
+    yosys > !gvim multiple_modules.flat.v
+    ```
+    <p align="center"> <img width="1917" height="972" alt="image" src="https://github.com/user-attachments/assets/d6919b7e-3be3-4443-998a-76a21dd61714" /></p>
+
+    Netlist after flattening :
+
+    <p align="center"><img width="1918" height="985" alt="image" src="https://github.com/user-attachments/assets/ee3cfbbd-c00a-46b7-9c19-e6aba47ea626" /></p>
+
+
     
 
 
