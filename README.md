@@ -211,8 +211,24 @@
     : sp ../lib/sky130_fd_sc_hd__a2111o.behavioral.v
     ```
 
-    <p align="center"><img width="1918" height="913" alt="image" src="https://github.com/user-attachments/assets/ecf263ff-d256-4afc-8e45-838fd42a0618" /></p>
+    <p align="center"><img width="1918" height="952" alt="image" src="https://github.com/user-attachments/assets/bb9354c2-f405-4089-9a53-52774ae324bb" /></p>
 
+    
+  ## Lecture-12: SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3
+  - To consider even a simpler example of  **and2_0**
+    ```
+    /cell .*and
+    ```
+
+    ```
+    : sp ../lib/sky130_fd_sc_hd__and2.behavioral.v
+    ```
+
+    <p align="center"><img width="1917" height="936" alt="image" src="https://github.com/user-attachments/assets/023414ce-e31d-4d49-ab16-fd5fd9c56ca3" /></p>
+
+
+    
+    
 
 
 
