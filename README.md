@@ -301,7 +301,40 @@
     - Module level is preferred when we have multiple modules and want to incorporate the **divide and conquer** approach(hierarchical design)
    
     
-    ## Lecture-15: SKY130RTL D2SK3 L1 Why Flops and Flop coding styles part1 
+    ## Lecture-15: SKY130RTL D2SK3 L1 Why Flops and Flop coding styles part1
+
+    - A glitch is the momentary change of output.
+    <p align="center"><img width="617" height="628" alt="image" src="https://github.com/user-attachments/assets/f60db8c0-5896-441b-a6c2-53f4a0d90638" /></p>
+
+    - Why Flops? - To reduce glitches so that the output changes only on the edge of the clock. Control pins for resetting or presetting the flop are present.
+
+    ## Lecture-16: SKY130RTL D2SK3 L2 Why Flops and Flop coding styles part2
+
+    -  always block gets executed whenever there is a change in the clock or reset.
+    -  **Asynchronous reset** is the reset that is independent of the clock signal.
+      ```
+    module dff_asyn_res(input clk,d,output q);
+      always @(posedge clk or posedge rst)
+      begin
+        if(rst)
+          q<=1'b0;
+        else
+          q<=d;
+      end
+    endmodule
+      ```
+    -  **Synchronous reset** is the reset that is dependent on the clock signal.
+      ```
+    module dff_syn_res(input clk,d,output q);
+      always @(posedge clk)
+      begin
+        if(rst)
+          q<=1'b0;
+        else
+          q<=d;
+      end
+    endmodule
+      ```
     
 
 
