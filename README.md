@@ -248,6 +248,7 @@
     ```
     yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
     yosys > read_verilog multiple_modules.v
+    yosys > synth -top multiple_modules
     yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
     ```
 
@@ -286,7 +287,21 @@
 
     <p align="center"><img width="1918" height="985" alt="image" src="https://github.com/user-attachments/assets/ee3cfbbd-c00a-46b7-9c19-e6aba47ea626" /></p>
 
+    To perform sub-module synthesis :
 
+    ```
+    yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+    yosys > read_verilog multiple_modules.v
+    yosys > synth -top sub_module1
+    yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+    yosys > show
+    ```
+    <p align="center"><img width="1918" height="936" alt="image" src="https://github.com/user-attachments/assets/7b015ede-e5f9-47e1-b122-505ce9be042a" /></p>
+
+    - Module level is preferred when we have multiple modules and want to incorporate the **divide and conquer** approach(hierarchical design)
+   
+    
+    ## Lecture-15: SKY130RTL D2SK3 L1 Why Flops and Flop coding styles part1 
     
 
 
