@@ -584,6 +584,34 @@
       yosys > synth -top multiple_modules_opt
       ```
 
+      <p align="center"><img width="807" height="793" alt="image" src="https://github.com/user-attachments/assets/9c9d2aec-3ea4-4b56-90e1-3ffeb6bd954f" /></p>
+
+      ```
+      yosys > flatten
+      yosys > write_verilog -noattr multiple_module_opt_flat.v
+      yosys > !gvim multiplr_module_opt_flat.v
+      ```
+
+      <p align="center"><img width="688" height="366" alt="image" src="https://github.com/user-attachments/assets/13b61cd0-eb62-44f6-8306-8408c5315f19" /></p>
+
+      <p align="center"><img width="1917" height="926" alt="image" src="https://github.com/user-attachments/assets/4aa7188b-4bb1-4220-8ea0-0c3689cdfcfb" /></p>
+
+      ```
+      yosys > opt_clean -purge
+      yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > show
+      ```
+
+      <p align="center"><img width="1918" height="922" alt="image" src="https://github.com/user-attachments/assets/aece825c-26ab-41fb-88db-b28f8333eb21" /></p>
+
+
+
+
+      
+
+
+
+
       
 
       
