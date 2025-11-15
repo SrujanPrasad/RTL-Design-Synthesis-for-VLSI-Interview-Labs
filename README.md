@@ -659,15 +659,8 @@
       ```
       <p align="center"><img width="1916" height="946" alt="image" src="https://github.com/user-attachments/assets/8d4359de-7777-467f-b05c-75a8188f0df0" /></p>
  
-      
 
-
-
-
-
-
-
-
+      ## Lecture-27: SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2
 
       - Working on dff_const2.v :
 
@@ -677,6 +670,26 @@
         gtkwave tb_dff_const2.vcd
         ```
         <p align="center"><img width="1916" height="917" alt="image" src="https://github.com/user-attachments/assets/74775511-b0d3-406c-a7af-d235bfc1d06d" /></p>
+
+      ```
+      yosys
+      yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > read_verilog dff_const2.v
+      yosys > synth -top dff_const2
+      ```
+      <p align="center"><img width="583" height="256" alt="image" src="https://github.com/user-attachments/assets/7b4cbef5-ca34-42f4-84d2-b59ac50ba68a" /></p>
+ 
+      Now since now flop is required
+ 
+      ```
+      yosys >abc -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
+      yosys > show
+      ```
+ 
+      <p align="center"><img width="1916" height="960" alt="image" src="https://github.com/user-attachments/assets/caa7b632-57c1-4e60-b8f7-2bb16cfb2abd" /></p>
+ 
+
+        
         
 
 
