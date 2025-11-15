@@ -431,7 +431,7 @@
     <p align="center"><img width="872" height="326" alt="image" src="https://github.com/user-attachments/assets/0c8dd276-a542-4604-87aa-c4c2314cbcc9" /></p>
 
     ```
-      yosys > dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
     ```
 
     <p align="center"><img width="867" height="187" alt="image" src="https://github.com/user-attachments/assets/ca3edc3f-85cc-4a43-8871-31818bc6e551" /></p>
@@ -444,7 +444,7 @@
   
     - To view netlist :
       ```
-      yosys > write_verilog -noattr ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > write_verilog -noattr mul2_net.v
       yosys > !gvim mul2_net.v
       ```
   <p align="center"><img width="1918" height="921" alt="image" src="https://github.com/user-attachments/assets/56e68b1a-55e9-428b-8740-89314de3cb7d" /></p>
@@ -455,6 +455,40 @@
     - ax9 is nothing but ax[8+1] = ax8 +ax1 here a is a 3 bit number
 
       <p align="center"><img width="1255" height="708" alt="image" src="https://github.com/user-attachments/assets/52b32357-32bc-4149-91f4-e0fc41f694d7" /></p>
+
+      ```
+      yosys
+      yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > read_verilog mult_8.v
+      yosys > synth -top mult8
+      ```
+      <p align="center"><img width="785" height="318" alt="image" src="https://github.com/user-attachments/assets/e08d4562-d479-4c14-b216-b17da6339306" /></p>
+
+    ```
+      yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+    ```
+
+    <p align="center"><img width="747" height="147" alt="image" src="https://github.com/user-attachments/assets/52493937-4ce4-41f1-983d-297d843ebe43" /></p>
+
+    ```
+    show
+    ```
+
+    <p align="center"></p>
+
+    - To view netlist :
+      ```
+      yosys > write_verilog -noattr mult8_net.v
+      yosys > !gvim mult8_net.v
+      ```
+
+    
+
+
+    
+
+
+      
 
     
 
