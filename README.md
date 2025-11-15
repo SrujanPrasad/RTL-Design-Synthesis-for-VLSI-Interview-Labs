@@ -536,7 +536,7 @@
       ```
       <p align="center"><img width="1917" height="937" alt="image" src="https://github.com/user-attachments/assets/6c03a92b-892e-49ef-8146-f9a8760c6d2a" /></p>
 
-     - Working on opt_check2.v (and gate after optimisation)
+     - Working on opt_check2.v (or gate after optimisation)
 
        <p align="center"><img width="1918" height="885" alt="image" src="https://github.com/user-attachments/assets/ea1f5821-c4c3-47b6-bd7c-c115f6bc0d63" /></p>
 
