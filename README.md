@@ -1,4 +1,4 @@
-# RTL-Design-Synthesis-for-VLSI-Interview-Labs
+<img width="1918" height="921" alt="image" src="https://github.com/user-attachments/assets/fee785be-eaa7-4bb5-89c4-e933361ea843" /># RTL-Design-Synthesis-for-VLSI-Interview-Labs
 
 <details>
   <summary> Setting up the environment on Codespace </summary>
@@ -413,6 +413,52 @@
 
 
       ## Lecture-19: SKY130RTL D2SK3 L5 Interesting optimisations part1
+
+      - Code Optimizations : Multiplying a number by 2 
+
+        <p align="center"><img width="1266" height="717" alt="image" src="https://github.com/user-attachments/assets/85a5cf8c-15ea-4367-8bae-d8168db80403" /></p>
+
+        output y[3:0] is simply {a,0} - multiplication by 2
+        output y[4:0] is simply {a,0,0} -multipliation by 4
+
+      - Multiplication by 2 :
+
+    ```
+      yosys
+      yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > read_verilog mult_2.v
+      yosys > synth -top mul2
+    ```
+    <p align="center"><img width="872" height="326" alt="image" src="https://github.com/user-attachments/assets/0c8dd276-a542-4604-87aa-c4c2314cbcc9" /></p>
+
+    ```
+      yosys > dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+    ```
+
+    <p align="center"><img width="867" height="187" alt="image" src="https://github.com/user-attachments/assets/ca3edc3f-85cc-4a43-8871-31818bc6e551" /></p>
+
+    ```
+    show
+    ```
+    - To view netlist :
+      ```
+      yosys > write_verilog -noattr ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > !gvim mul2_net.v
+      ```
+      <p align="center"><img width="1918" height="921" alt="image" src="https://github.com/user-attachments/assets/56e68b1a-55e9-428b-8740-89314de3cb7d" /></p>
+
+
+    <p align="center"><img width="1917" height="965" alt="image" src="https://github.com/user-attachments/assets/737d464a-bb1e-452a-a162-c437e6bcaf3d" /></p>
+
+    ## Lecture-20: SKY130RTL D2SK3 L6 Interesting optimisations part2
+
+    - a*9 is nothing but a*[8+1] = a*8 +a*1 here a is a 3 bit number
+
+      <p align="center"><img width="1255" height="708" alt="image" src="https://github.com/user-attachments/assets/52b32357-32bc-4149-91f4-e0fc41f694d7" /></p>
+
+    
+
+
 
 
     
