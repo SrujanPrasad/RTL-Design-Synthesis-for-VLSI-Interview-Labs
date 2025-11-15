@@ -575,7 +575,18 @@
 
      <p align="center"><img width="1918" height="953" alt="image" src="https://github.com/user-attachments/assets/8bb10e48-a59b-4d88-85cd-d8af6e91ee7c" /></p>
 
-    - Working on 
+    - Working on multiple_modules_opt.v
+ 
+      ```
+      yosys
+      yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > read_verilog multiple_modules_opt.v
+      yosys > synth -top multiple_modules_opt
+      ```
+
+      
+
+      
 
 
      
