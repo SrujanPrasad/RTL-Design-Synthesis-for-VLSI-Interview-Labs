@@ -452,7 +452,7 @@
 
     ## Lecture-20: SKY130RTL D2SK3 L6 Interesting optimisations part2
 
-    - a*9 is nothing but a*[8+1] = a*8 +a*1 here a is a 3 bit number
+    - ax9 is nothing but ax[8+1] = ax8 +ax1 here a is a 3 bit number
 
       <p align="center"><img width="1255" height="708" alt="image" src="https://github.com/user-attachments/assets/52b32357-32bc-4149-91f4-e0fc41f694d7" /></p>
 
