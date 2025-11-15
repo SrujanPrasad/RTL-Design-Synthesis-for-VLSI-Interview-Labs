@@ -575,7 +575,7 @@
 
      <p align="center"><img width="1918" height="953" alt="image" src="https://github.com/user-attachments/assets/8bb10e48-a59b-4d88-85cd-d8af6e91ee7c" /></p>
 
-    - Working on multiple_modules_opt.v
+    - Working on multiple_modules_opt.v (a21o gate)
  
       ```
       yosys
@@ -585,6 +585,19 @@
       ```
 
       <p align="center"><img width="807" height="793" alt="image" src="https://github.com/user-attachments/assets/9c9d2aec-3ea4-4b56-90e1-3ffeb6bd954f" /></p>
+      
+      ```
+      yosys > abc -liberty ..lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > show multiple_module_opt
+      ```
+      
+      <p align="center"><img width="1917" height="942" alt="image" src="https://github.com/user-attachments/assets/099dd337-1a01-4288-96fc-a3eb10bdeae7" /></p>
+
+      ```
+      yosys > write_verilog -noattr multiple_module_opt_hier.v
+      yosys > !gvim multiple_module_opt_hier.v
+      ```
+      <p align="center"><img width="1912" height="885" alt="image" src="https://github.com/user-attachments/assets/e14dc756-85d3-440c-9c96-c6655e072b8e" /></p>
 
       ```
       yosys > flatten
@@ -603,6 +616,10 @@
       ```
 
       <p align="center"><img width="1918" height="922" alt="image" src="https://github.com/user-attachments/assets/aece825c-26ab-41fb-88db-b28f8333eb21" /></p>
+
+       - Working on multiple_modules_opt2.v (a21o gate)
+
+         
 
 
 
