@@ -1,4 +1,3 @@
-<img width="1918" height="921" alt="image" src="https://github.com/user-attachments/assets/fee785be-eaa7-4bb5-89c4-e933361ea843" /># RTL-Design-Synthesis-for-VLSI-Interview-Labs
 
 <details>
   <summary> Setting up the environment on Codespace </summary>
