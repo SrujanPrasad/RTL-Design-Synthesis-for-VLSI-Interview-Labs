@@ -1,4 +1,4 @@
-
+# RTL-Design-Synthesis-for-VLSI-Interview-Labs
 <details>
   <summary> Setting up the environment on Codespace </summary>
   
@@ -439,15 +439,16 @@
     ```
     show
     ```
+
+  <p align="center"><img width="1917" height="965" alt="image" src="https://github.com/user-attachments/assets/737d464a-bb1e-452a-a162-c437e6bcaf3d" /></p>
+  
     - To view netlist :
       ```
       yosys > write_verilog -noattr ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > !gvim mul2_net.v
       ```
-      <p align="center"><img width="1918" height="921" alt="image" src="https://github.com/user-attachments/assets/56e68b1a-55e9-428b-8740-89314de3cb7d" /></p>
+  <p align="center"><img width="1918" height="921" alt="image" src="https://github.com/user-attachments/assets/56e68b1a-55e9-428b-8740-89314de3cb7d" /></p>
 
-
-    <p align="center"><img width="1917" height="965" alt="image" src="https://github.com/user-attachments/assets/737d464a-bb1e-452a-a162-c437e6bcaf3d" /></p>
 
     ## Lecture-20: SKY130RTL D2SK3 L6 Interesting optimisations part2
 
