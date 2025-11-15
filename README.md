@@ -617,7 +617,7 @@
 
       <p align="center"><img width="1918" height="922" alt="image" src="https://github.com/user-attachments/assets/aece825c-26ab-41fb-88db-b28f8333eb21" /></p>
 
-      - Working on multiple_modules_opt2.v ( gate)
+    - Working on multiple_modules_opt2.v ( gate)
 
         <p align="center"><img width="762" height="773" alt="image" src="https://github.com/user-attachments/assets/db5bbee7-1487-4bfb-995a-8bb6c778f064" /></p>
 
