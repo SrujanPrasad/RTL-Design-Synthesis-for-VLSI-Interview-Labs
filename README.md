@@ -503,6 +503,11 @@
 
    ## Lecture-23: SKY130RTL D3SK1 L3 Introduction to optimisations part3
 
+    <p align="center"><img width="1842" height="1028" alt="image" src="https://github.com/user-attachments/assets/78125807-b9b6-4f70-8807-9b419a289272" /></p>
+
+    - This involves partitioning some portion of the logic by pushing it further.
+
+
 
 
 
