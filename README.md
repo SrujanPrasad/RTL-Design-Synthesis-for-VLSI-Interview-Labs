@@ -483,24 +483,40 @@
       ```
 
       <p align="center"><img width="1917" height="828" alt="image" src="https://github.com/user-attachments/assets/c1a72fc9-2180-4fba-9f4f-75d11b25c775" /></p>
+  </details>
 
+  <details>
+  <summary>DAY-3</summary>
 
-    
+  ## Lecture-21: SKY130RTL D3SK1 L1 Introduction to optimisations part1
 
-
-    
-
-
-      
-
-    
-
+  
+  
 
 
 
-    
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -520,7 +536,6 @@
 
 
   </details>
-
 
    
     
