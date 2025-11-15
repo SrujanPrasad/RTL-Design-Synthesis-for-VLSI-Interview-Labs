@@ -507,6 +507,49 @@
 
     - This involves partitioning some portion of the logic by pushing it further.
 
+    ## Lecture-24: SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1
+
+    - Working on opt_check.v (and gate after optimisation)
+
+      ```
+      yosys
+      yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > read_verilog opt_check.v
+      yosys > synth -top opt_check
+      ```
+
+      <p align="center"><img width="617" height="375" alt="image" src="https://github.com/user-attachments/assets/a5e8392f-f77d-4f1c-9ceb-a229b53d706c" /></p>
+
+      To optimise it :
+      ```
+      yosys > opt_clean -purge
+      ```
+
+       <p align="center"><img width="1180" height="338" alt="image" src="https://github.com/user-attachments/assets/b2bd053c-87ab-4255-bd87-d7e51e8c8743" /></p>
+
+      ```
+      yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      ```
+
+      ```
+      show
+      ```
+      <p align="center"><img width="1917" height="937" alt="image" src="https://github.com/user-attachments/assets/6c03a92b-892e-49ef-8146-f9a8760c6d2a" /></p>
+
+     - Working on opt_check2.v (and gate after optimisation)
+
+       <p align="center"><img width="1918" height="885" alt="image" src="https://github.com/user-attachments/assets/ea1f5821-c4c3-47b6-bd7c-c115f6bc0d63" /></p>
+
+
+       
+
+      
+       
+
+      
+
+    
+
 
 
 
