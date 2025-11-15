@@ -617,7 +617,23 @@
 
       <p align="center"><img width="1918" height="922" alt="image" src="https://github.com/user-attachments/assets/aece825c-26ab-41fb-88db-b28f8333eb21" /></p>
 
-       - Working on multiple_modules_opt2.v (a21o gate)
+      - Working on multiple_modules_opt2.v ( gate)
+
+        <p align="center"><img width="762" height="773" alt="image" src="https://github.com/user-attachments/assets/db5bbee7-1487-4bfb-995a-8bb6c778f064" /></p>
+
+        <p align="center"><img width="1918" height="957" alt="image" src="https://github.com/user-attachments/assets/136b8f46-9e41-47d0-aa42-1a438d0cff4c" /></p>
+
+        <p align="center"><img width="1918" height="953" alt="image" src="https://github.com/user-attachments/assets/64f46535-c982-4460-ac09-c844423048d2" /></p>
+
+        <p align="center"><img width="1907" height="953" alt="image" src="https://github.com/user-attachments/assets/86ec2cae-139e-4599-9ff5-bca236cd96dd" /></p>
+
+        <p align="center"><img width="1915" height="897" alt="image" src="https://github.com/user-attachments/assets/435ac7ed-2405-4c03-85ba-ec94d53a5b6c" /></p>
+
+
+        
+
+
+
 
          
 
