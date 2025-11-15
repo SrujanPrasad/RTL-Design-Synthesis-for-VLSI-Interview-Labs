@@ -474,13 +474,16 @@
     show
     ```
 
-    <p align="center"></p>
+    <p align="center"><img width="1918" height="998" alt="image" src="https://github.com/user-attachments/assets/039b4dda-b03f-431f-81b4-ef87c4abf5a5" /></p>
 
     - To view netlist :
       ```
       yosys > write_verilog -noattr mult8_net.v
       yosys > !gvim mult8_net.v
       ```
+
+      <p align="center"><img width="1917" height="828" alt="image" src="https://github.com/user-attachments/assets/c1a72fc9-2180-4fba-9f4f-75d11b25c775" /></p>
+
 
     
 
