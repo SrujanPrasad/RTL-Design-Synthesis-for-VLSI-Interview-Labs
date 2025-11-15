@@ -629,6 +629,60 @@
 
         <p align="center"><img width="1915" height="897" alt="image" src="https://github.com/user-attachments/assets/435ac7ed-2405-4c03-85ba-ec94d53a5b6c" /></p>
 
+      ## Lecture-26: SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1
+
+      - Working on dff_const1.v :
+
+        ```
+        iverilog tb_dfF_const1.v dff_const1.v
+        ./a.out
+        gtkwave tb_dff_const1.vcd
+        ```
+        <p align="center"><img width="1915" height="933" alt="image" src="https://github.com/user-attachments/assets/f5cae4d4-1270-4116-8479-23f0dbba789b" /></p>
+ 
+      ```
+      yosys
+      yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > read_verilog dff_const1.v
+      yosys > synth -top dff_const1
+      ```
+      <p align="center"><img width="598" height="248" alt="image" src="https://github.com/user-attachments/assets/1bd9a9e6-0ead-4e22-ae90-2da85d13733b" /></p>
+ 
+      ```
+      yosys > dfflibmap -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
+      ```
+ 
+      <p align="center"><img width="1027" height="612" alt="image" src="https://github.com/user-attachments/assets/6050bcd7-42dc-4d9e-8393-b60478d0c873" /></p>
+ 
+      ```
+      show
+      ```
+      <p align="center"><img width="1916" height="946" alt="image" src="https://github.com/user-attachments/assets/8d4359de-7777-467f-b05c-75a8188f0df0" /></p>
+ 
+      
+
+
+
+
+
+
+
+
+
+      - Working on dff_const2.v :
+
+        ```
+        iverilog tb_dfF_const2.v dff_const2.v
+        ./a.out
+        gtkwave tb_dff_const2.vcd
+        ```
+        <p align="center"><img width="1916" height="917" alt="image" src="https://github.com/user-attachments/assets/74775511-b0d3-406c-a7af-d235bfc1d06d" /></p>
+        
+
+
+
+
+
 
         
 
