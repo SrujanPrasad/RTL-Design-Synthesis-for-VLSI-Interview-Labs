@@ -541,7 +541,52 @@
        <p align="center"><img width="1918" height="885" alt="image" src="https://github.com/user-attachments/assets/ea1f5821-c4c3-47b6-bd7c-c115f6bc0d63" /></p>
 
 
-       
+       ## Lecture-25: SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2
+
+     - Working on opt_check3.v (3 input AND gate after optimisation)
+
+      ```
+      yosys
+      yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > read_verilog opt_check3.v
+      yosys > synth -top opt_check3
+      ```
+    <p align="center"><img width="645" height="363" alt="image" src="https://github.com/user-attachments/assets/c200e65b-127f-43d8-9757-a5a065935c9e" /></p>
+    
+     - To optimise it :
+     
+      ```
+      yosys > opt_clean -purge
+      ```
+
+      ```
+      yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      ```
+
+      ```
+      show
+      ```
+
+  <p align="center"><img width="1918" height="927" alt="image" src="https://github.com/user-attachments/assets/e235a70a-7817-44c3-9818-c6855fd0e3de" /></p>
+
+    - Working on opt_check4.v (XNOR of A and C)
+
+     <p align="center"> <img width="625" height="376" alt="image" src="https://github.com/user-attachments/assets/3c2362cd-0e8d-48f7-a600-13875262f9f4" /></p>
+
+     <p align="center"><img width="1918" height="953" alt="image" src="https://github.com/user-attachments/assets/8bb10e48-a59b-4d88-85cd-d8af6e91ee7c" /></p>
+
+    - Working on 
+
+
+     
+
+      
+
+
+
+
+      
+      
 
       
        
