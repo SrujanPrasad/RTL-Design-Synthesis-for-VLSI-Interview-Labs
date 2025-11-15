@@ -490,6 +490,22 @@
 
   ## Lecture-21: SKY130RTL D3SK1 L1 Introduction to optimisations part1
 
+  - Boolean logic optimizations :
+
+    <p align="center"><img width="1600" height="1467" alt="image" src="https://github.com/user-attachments/assets/b3309b4f-7fe7-445f-91cf-64487c17d474" /></p>
+
+  ## Lecture-22: SKY130RTL D3SK1 L2 Introduction to optimisations part2
+
+  - Sequential Logic Optimization : (Also called as sequential constant)
+
+    <p align="center"><img width="1280" height="572" alt="image" src="https://github.com/user-attachments/assets/03236db9-4b37-467f-a846-0c151c5978fe" /></p>
+    <p align="center"><img width="1440" height="1600" alt="image" src="https://github.com/user-attachments/assets/a014f4be-6a04-495a-9fa1-f90d7db4fe4b" /></p>
+
+   ## Lecture-23: SKY130RTL D3SK1 L3 Introduction to optimisations part3
+
+
+
+
   
   
 
