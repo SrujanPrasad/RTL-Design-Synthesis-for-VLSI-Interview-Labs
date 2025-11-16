@@ -1029,39 +1029,11 @@
        ```
 
        <p align="center"><img width="1918" height="910" alt="image" src="https://github.com/user-attachments/assets/0be077ab-4bc1-4330-bae4-002c6c024a1a" /></p>
-
-      
-
-      
-      
-      
-
-      
-
        
+  </details>
 
-
-       
-
-
-        
-       
-
-       
-
-
-
-       
-   
-    
-
-    
-    
-
-
-    
-    
-
+  <details>
+    <summary>DAY-5</summary>
 
 
 
