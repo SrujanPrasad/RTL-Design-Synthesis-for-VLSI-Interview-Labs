@@ -767,6 +767,32 @@
    ```
   <p align="center"><img width="1918" height="922" alt="image" src="https://github.com/user-attachments/assets/060f8ddd-57dc-40e0-a148-f05d4e1a242e" /></p>
 
+    ## Lecture-29: SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1
+
+    - Working on 3-bit up counter (counter_opt.v)
+
+      ```
+      yosys
+      yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > read_verilog counter_opt.v
+      yosys > synth -top counter_opt
+      ```
+      <p align="center"><img width="417" height="286" alt="image" src="https://github.com/user-attachments/assets/f2bbd07b-3400-4cc0-87c6-461a9159a565" /></p>
+
+      ```
+      yosys > dfflibmap -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
+      yosys > abc -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
+      yosys > show
+      ```
+      <p align="center"><img width="1918" height="928" alt="image" src="https://github.com/user-attachments/assets/ab721e86-e63d-42a7-93b6-75648d883aea" /></p>
+
+      
+
+
+  
+
+  
+
 
   
   
