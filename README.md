@@ -679,7 +679,7 @@
       ```
       <p align="center"><img width="583" height="256" alt="image" src="https://github.com/user-attachments/assets/7b4cbef5-ca34-42f4-84d2-b59ac50ba68a" /></p>
  
-      Now since now flop is required
+      Now, since no flop is required
  
       ```
       yosys >abc -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
@@ -687,7 +687,96 @@
       ```
  
       <p align="center"><img width="1916" height="960" alt="image" src="https://github.com/user-attachments/assets/caa7b632-57c1-4e60-b8f7-2bb16cfb2abd" /></p>
+
+      ## Lecture-28: SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3
+
+     - Working on dff_const3.v
+
+       ```
+        iverilog tb_dfF_const3.v dff_const3.v
+        ./a.out
+        gtkwave tb_dff_const3.vcd
+       ```
+
+        <p align="center"><img width="1917" height="918" alt="image" src="https://github.com/user-attachments/assets/4d355a59-b531-4e1a-b62c-392e9bd90801" /></p>
+
+     ```
+      yosys
+      yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > read_verilog dff_const3.v
+      yosys > synth -top dff_const3
+     ```
+  <p align="center"><img width="557" height="286" alt="image" src="https://github.com/user-attachments/assets/55904c48-aec4-477e-ac3f-5f57e8c2efe9" /></p>
+
+   ```
+      yosys > dfflibmap -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
+      yosys > abc -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
+      yosys > show
+   ```
+
+  <p align="center"><img width="1913" height="927" alt="image" src="https://github.com/user-attachments/assets/4a6cf95f-8c34-4f46-9ad5-277e00b6c037" /></p>
+
+  - Working on dff_const4.v
+
+    ```
+        iverilog tb_dfF_const4.v dff_const4.v
+        ./a.out
+        gtkwave tb_dff_const4.vcd
+     ```
+
+    <p align="center"><img width="1918" height="927" alt="image" src="https://github.com/user-attachments/assets/8464fb60-c830-4db7-8571-1cf57541445e" /></p>
+
+      ```
+      yosys
+      yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > read_verilog dff_const4.v
+      yosys > synth -top dff_const4
+      ```
+  <p align="center"><img width="506" height="246" alt="image" src="https://github.com/user-attachments/assets/289ad699-ea58-4af6-a9a4-d1dc4ed2d7df" /></p>
+
+  Since no flop is required : 
+
+   ```
+      yosys > abc -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
+      yosys > show
+   ```
+  <p align="center"><img width="1918" height="928" alt="image" src="https://github.com/user-attachments/assets/d9647f98-b097-4a17-bb35-ac0cd658e45a" /></p>
+
+  - Working on dff_const3.v
+
+     ```
+        iverilog tb_dfF_const5.v dff_const5.v
+        ./a.out
+        gtkwave tb_dff_const5.vcd
+      ```
+
+    <p align="center"><img width="1916" height="922" alt="image" src="https://github.com/user-attachments/assets/b2945909-c835-43bf-aded-b063c150f3dc" /></p>
+
+    ```
+      yosys
+      yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > read_verilog dff_const3.v
+      yosys > synth -top dff_const3
+    ```
+  <p align="center"><img width="558" height="272" alt="image" src="https://github.com/user-attachments/assets/bc417747-3093-4351-ab16-e1a588e717b1" /></p>
+
+  ```
+      yosys > dfflibmap -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
+      yosys > abc -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
+      yosys > show
+   ```
+  <p align="center"><img width="1918" height="922" alt="image" src="https://github.com/user-attachments/assets/060f8ddd-57dc-40e0-a148-f05d4e1a242e" /></p>
+
+
+  
+  
  
+
+  
+
+
+  
+
 
         
         
