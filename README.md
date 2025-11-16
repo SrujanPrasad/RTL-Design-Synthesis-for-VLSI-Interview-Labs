@@ -787,7 +787,8 @@
       <p align="center"><img width="1918" height="928" alt="image" src="https://github.com/user-attachments/assets/ab721e86-e63d-42a7-93b6-75648d883aea" /></p>
 
       This netlist is nothing but same as circuit shown in below image :
-      <p align="center">
+      <p align="center"><img width="1539" height="1600" alt="image" src="https://github.com/user-attachments/assets/0e8cba0a-e7a6-4f90-bd11-deefed47449d" /></p>
+
 
       ## Lecture-30: SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2
 
@@ -815,7 +816,23 @@
   <details>
     <summary>DAY-4</summary>
 
-    ## Lecture-31: SKY130RTL D4SK1 L1 GLSConceptsAndFlowUsingIverilog
+  ## Lecture-31: SKY130RTL D4SK1 L1 GLSConceptsAndFlowUsingIverilog
+
+    - **"GLS"** stands for Gate Level Simulation.
+    - GLS is nothing but running the netlist with testbench as netlist is same as the RTL code.
+
+  <p align="center"><img width="1207" height="635" alt="image" src="https://github.com/user-attachments/assets/c2163aff-bc27-467f-85d4-30edd1d82e16" /></p>
+
+    - Gate level verilog models contain the information about the behavior of the standard cells.
+    - If Gate level verilog models are timing aware then they can be used for timing validation as well.
+ 
+  ## Lecture-32: SKY130RTL D4SK1 L2 SynthesisSimulationMismatch
+
+  - Synthesis and Simulation mismatches can occur due to :
+    - Missing sensitivity list.
+    - Blocking vs non blocking assignments.
+    - Non standard verilog coding.
+ 
 
     
     
