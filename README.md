@@ -832,7 +832,83 @@
     - Missing sensitivity list.
     - Blocking vs non blocking assignments.
     - Non standard verilog coding.
- 
+
+  - Missing Sensitivity list :
+
+     <p align="center"><img width="1247" height="692" alt="image" src="https://github.com/user-attachments/assets/4ee18fef-3140-4421-b0fc-1636cc7c2ea7" /></p>
+
+  ## Lecture-33: SKY130RTL D4SK1 L3 BlockingAndNonBlockingStatementsInVerilog
+
+  - Blocking vs Non Blocking Assignments:
+    - **Blocking assignment (=)**: evaluates sequentially line by line.
+    - **Non Blocking assignment (<=)**: evaluates parallely.
+
+    <p align="center"><img width="1212" height="662" alt="image" src="https://github.com/user-attachments/assets/7963bbd0-0585-4bf5-8291-f7d58c8b4462" /></p>
+
+    
+  ## Lecture-34: SKY130RTL D4SK1 L4 CaveatsWithBlockingStatements
+
+  - We must use non blocking statements for modelling sequential circuits.
+  - Verilog code for shift register using blocking statements :
+    ```
+    module shift(input clk,d,rst,output q0,q);
+    always @(posedge clk or posedge rst)
+      begin
+        if(rst)
+          begin
+              q0=1'b0;
+              q=1'b0;
+          end
+        else
+          begin
+             q=q0;
+             q0=d;
+          end
+      end
+    endmodule
+    ```
+  - Verilog code for shift register using non-blocking statements :
+    ```
+    module shift(input clk,d,rst,output reg q0,q);
+    always @(posedge clk or posedge rst)
+      begin
+        if(rst)
+          begin
+              q0<=1'b0;
+              q<=1'b0;
+          end
+        else
+          begin
+             q0<=d;
+             q<=q0;
+          end
+      end
+    endmodule
+    ```
+  - Suppose if the following code is written assuming it will synthesize a shift register:
+    ```
+    module shift(input clk,d,rst,output q0,q);
+    always @(posedge clk or posedge rst)
+      begin
+        if(rst)
+          begin
+              q0=1'b0;
+              q=1'b0;
+          end
+        else
+          begin
+             q0=d;
+             q=q0;
+          end
+      end
+    endmodule
+    ```
+
+    q0 already has the value of d , hence q will simply follow d and only one flip flop will be synthesized as we have used the blocking assignment.So this is the blocking vs non blocking mismatch.
+
+    
+    
+
 
     
     
