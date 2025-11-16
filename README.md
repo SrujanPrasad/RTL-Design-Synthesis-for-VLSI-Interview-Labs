@@ -847,8 +847,7 @@
 
     
   ## Lecture-34: SKY130RTL D4SK1 L4 CaveatsWithBlockingStatements
-
-  - We must use non blocking statements for modelling sequential circuits.
+  
   - Verilog code for shift register using blocking statements :
     ```
     module shift(input clk,d,rst,output q0,q);
@@ -904,7 +903,10 @@
     endmodule
     ```
 
-    q0 already has the value of d , hence q will simply follow d and only one flip flop will be synthesized as we have used the blocking assignment.So this is the blocking vs non blocking mismatch.
+  - q0 already has the value of d , hence q will simply follow d and only one flip flop will be synthesized as we have used the blocking assignment.So this is the blocking vs non blocking mismatch.
+  - Hence , we must use non blocking statements for modelling sequential circuits.
+
+    
 
     
     
