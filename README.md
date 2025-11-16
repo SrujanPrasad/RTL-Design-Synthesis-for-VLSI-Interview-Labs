@@ -990,6 +990,9 @@
        
        <p align="center"><img width="1918" height="925" alt="image" src="https://github.com/user-attachments/assets/a9057227-060f-45be-a0fc-a33d970b08dc" /></p>
 
+    ## Lecture-37: SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1
+    
+
        
 
 
