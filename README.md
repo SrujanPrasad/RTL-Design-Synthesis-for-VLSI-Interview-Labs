@@ -769,7 +769,7 @@
 
     ## Lecture-29: SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1
 
-    - Working on 3-bit up counter (counter_opt.v)
+    - Working on 3-bit up counter (counter_opt.v with q=count[0])
 
       ```
       yosys
@@ -785,6 +785,33 @@
       yosys > show
       ```
       <p align="center"><img width="1918" height="928" alt="image" src="https://github.com/user-attachments/assets/ab721e86-e63d-42a7-93b6-75648d883aea" /></p>
+
+      This netlist is nothing but same as circuit shown in below image :
+      <p align="center">
+
+      ## Lecture-30: SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2
+
+  - Working on 3-bit up counter (counter_opt2.v)
+     
+     ```
+      yosys
+      yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > read_verilog counter_opt2.v
+      yosys > synth -top counter_opt2
+     ```
+   <p align="center"><img width="537" height="350" alt="image" src="https://github.com/user-attachments/assets/5ce93b07-1bd6-433c-a3f3-bb2ecf678760" /></p>
+
+   ```
+      yosys > dfflibmap -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
+      yosys > abc -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
+      yosys > show
+   ```
+  <p align="center"><img width="1918" height="918" alt="image" src="https://github.com/user-attachments/assets/5869d181-11af-4a1e-9d8b-300ac1d6ccf0" /></p>
+
+   
+
+   
+
 
       
 
