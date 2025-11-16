@@ -906,6 +906,105 @@
   - q0 already has the value of d , hence q will simply follow d and only one flip flop will be synthesized as we have used the blocking assignment.So this is the blocking vs non blocking mismatch.
   - Hence , we must use non blocking statements for modelling sequential circuits.
 
+  ## Lecture-35: SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1
+
+  - Wokring on ternary_operator_mux.v
+     - 2x1 MUX using trernary operator :
+       ```
+       module mux21(input i0,i1,s,output out);
+       assign out = s?i1:i0;
+       endmodule
+       ```
+
+       ```
+       iverilog tb_ternary_operator_mux.v ternary_operator_mux.v
+       ./a.out
+       gtkwave tb_ternary_operator_mux.vcd
+       ```
+       <p align="center"><img width="1918" height="930" alt="image" src="https://github.com/user-attachments/assets/d6e76f3f-05e0-45ae-8e32-53b88364792f" /></p>
+
+       ```
+       yosys
+       yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+       yosys > read_verilog ternary_operator_mux.v
+       yosys > synth -top ternary_operator_mux
+       ```
+
+       <p align="center"><img width="553" height="277" alt="image" src="https://github.com/user-attachments/assets/93469649-4006-46f3-9ee1-769b9bb57433" /></p>
+
+       ```
+       yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+       yosys > show
+       ```
+       <p align="center"><img width="1917" height="941" alt="image" src="https://github.com/user-attachments/assets/d35dc1c6-1056-4337-85b0-cf4588b2ad1a" /></p>
+
+       ```
+       yosys > write_verilog -noattr ternary_operator_mux_net.v
+       yosys > !gvim ternary_operator_mux_net.v
+       ```
+       
+       <p align="center"><img width="1917" height="913" alt="image" src="https://github.com/user-attachments/assets/e4e5738d-f08e-4b47-89a8-2afe1685c43d" /></p>
+
+       Now to do GLS :
+
+       ```
+       iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
+       ./a.out
+       gtkwave tb_ternary_operator_mux.vcd
+       ```
+
+       <p align="center"><img width="1918" height="917" alt="image" src="https://github.com/user-attachments/assets/a51df72f-8101-483c-84f1-fb7996298917" /></p>
+
+       The red circle in the above image indicates that the GLS has been performed.
+
+    ## Lecture-36: SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2
+
+    - Working on bad_mux.v
+
+       ```
+       iverilog tb_bad_mux.v bad_mux.v
+       ./a.out
+       gtkwave tb_bad_mux.vcd
+       ```
+       <p align="center"><img width="1918" height="918" alt="image" src="https://github.com/user-attachments/assets/ceea8d43-309c-4fd9-aeaa-7fda9bd0dbdf" /></p>
+
+       ```
+       yosys
+       yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+       yosys > read_verilog bad_mux.v
+       yosys > synth -top bad_mux
+       ```
+
+       <p align="center"><img width="530" height="278" alt="image" src="https://github.com/user-attachments/assets/f5839aeb-6c04-42c4-8f9c-6c538b8c551f" /></p>
+
+       ```
+       yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+       yosys > write_verilog -noattr bad_mux_net.v
+       ```
+
+       ```
+       iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_mux_net.v tb_bad_mux.v
+       ./a.out
+       gtkwave tb_bad_mux.vcd
+       ```
+       
+       <p align="center"><img width="1918" height="925" alt="image" src="https://github.com/user-attachments/assets/a9057227-060f-45be-a0fc-a33d970b08dc" /></p>
+
+       
+
+
+       
+
+
+        
+       
+
+       
+
+
+
+       
+   
     
 
     
