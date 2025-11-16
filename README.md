@@ -991,7 +991,52 @@
        <p align="center"><img width="1918" height="925" alt="image" src="https://github.com/user-attachments/assets/a9057227-060f-45be-a0fc-a33d970b08dc" /></p>
 
     ## Lecture-37: SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1
-    
+
+    - Working with blocking_caveat.v :
+      ```
+      iverilog blocking_caveat.v tb_blocking_caveat.v
+      ./a.out
+      gtkwave tb_blocking_caveat.vcd
+      ```
+
+      <p align="center"><img width="1917" height="925" alt="image" src="https://github.com/user-attachments/assets/119d18f9-5ab3-4573-83fc-96c50296df5f" /></p>
+
+    ## Lecture-38: SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2
+
+      ```
+      yosys
+      yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > read_verilog blocking_caveat.v
+      yosys > synth -top blocking_caveat
+      ```
+
+      <p align="center"><img width="520" height="296" alt="image" src="https://github.com/user-attachments/assets/20596c6d-0372-43c6-9312-548c29687d07" /></p>
+
+      ```
+      yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+      yosys > write_verilog -noattr blocking_caveat.v
+      yosys > show
+      ```
+
+      <p align="center"><img width="1917" height="927" alt="image" src="https://github.com/user-attachments/assets/7d0e2bcf-4928-45b5-9c0a-6f4c1d8432da" /></p>
+
+       Now to do GLS :
+
+       ```
+       iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat_net.v tb_blocking_caveat.v
+       ./a.out
+       gtkwave tb_blocking_caveat.vcd
+       ```
+
+       <p align="center"><img width="1918" height="910" alt="image" src="https://github.com/user-attachments/assets/0be077ab-4bc1-4330-bae4-002c6c024a1a" /></p>
+
+      
+
+      
+      
+      
+
+      
 
        
 
