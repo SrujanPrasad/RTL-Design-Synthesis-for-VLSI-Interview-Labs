@@ -1035,6 +1035,31 @@
   <details>
     <summary>DAY-5</summary>
 
+    ## Lecture-39: SKY130RTL D5SK1 L1 IF CASE Constructs part1
+
+    - **If** statement :
+      if <cond1>
+        begin
+          ----
+          ----
+        end
+    - Problems  occurred using the if statement :
+      - **Inferred latches** - If there is no else statement, then a latch will be synthesized.
+      <p align="center"><img width="897" height="497" alt="image" src="https://github.com/user-attachments/assets/81c7297e-a479-4179-909f-477d39d1c0e2" /></p>
+
+      ## Lecture-40: SKY130RTL D5SK1 L2 IF CASE Constructs part2
+
+      <p align="center"><img width="891" height="502" alt="image" src="https://github.com/user-attachments/assets/a0c48f99-9d3e-4598-95f2-783ffa3dd1cb" /></p>
+
+      - Incomplete "**case**" statements also lead to inferred latches (if no default statement present)
+
+      <p align="center"><img width="891" height="501" alt="image" src="https://github.com/user-attachments/assets/d3e3afa0-8da5-44bb-96b7-bd303b1ec1f3" /></p>
+
+
+
+  
+
+
 
 
 
