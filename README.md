@@ -1160,6 +1160,8 @@
 
         ## Lecture-46: SKY130RTL D5SK3 L3 Lab incomplete overlapping Case part3
 
+      - Working on partial_casE_assign.v : 
+
         ```
         iverilog tb_partial_case_assign.v partial_case_assign.v
         ./a.out
@@ -1180,6 +1182,48 @@
         yosys > show
         ```
         <p align="center"><img width="1918" height="921" alt="image" src="https://github.com/user-attachments/assets/9229811e-7320-40b9-b025-b77da4598878" /></p>
+
+      - Working on bad_case.v :
+
+        ```
+        iverilog tb_bad_case.v bad_case.v
+        ./a.out
+        gtkwave tb_bad_case.vcd
+        ```
+        <p align="center"><img width="1918" height="920" alt="image" src="https://github.com/user-attachments/assets/c7dfeaa8-d009-41dc-b3cb-c9f6098ea078" /></p>
+     
+        ## Lecture-47: SKY130RTL D5SK3 L4 Lab incomplete overlapping Case part4
+
+       - Working on bad_case.v(contd..) :
+
+        ```
+        yosys
+        yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+        yosys > read_verilog bad_case.v
+        yosys > synth -top bad_case
+        ```
+        <p align="center"><img width="480" height="338" alt="image" src="https://github.com/user-attachments/assets/c1bce763-9fae-4bf5-8a8a-e44f61cc4905" /></p>
+
+        ```
+        yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+        yosys > write_verilog -noattr bad_case_net.v
+        yosys > show
+        ```
+        <p align="center"><img width="1918" height="918" alt="image" src="https://github.com/user-attachments/assets/ea15343a-f9c2-4ecc-bcfb-4657cc9e51f2" /></p>
+
+        To perform GLS :
+
+       ```
+       iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_case_net.v tb_bad_case.v
+       ./a.out
+       gtkwave tb_bad_case.vcd
+       ```
+       <p align="center"><img width="1918" height="920" alt="image" src="https://github.com/user-attachments/assets/3bf43188-f8dc-4c63-b9b5-892119272cfd" /></p>
+        
+
+        
+
+        
 
         
 
