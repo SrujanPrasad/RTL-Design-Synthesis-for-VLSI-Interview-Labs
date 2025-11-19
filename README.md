@@ -1127,7 +1127,46 @@
         yosys > read_verilog incomp_case.v
         yosys > synth -top incomp_case
         ```
-        <p align="center"></p>
+        <p align="center"><img width="482" height="307" alt="image" src="https://github.com/user-attachments/assets/822b3b8a-c027-4006-94d5-d38e9a61f589" /></p>
+
+        ```
+        yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+        yosys > show
+        ```
+        <p align="center"><img width="1918" height="908" alt="image" src="https://github.com/user-attachments/assets/33f7eddb-3bdc-4b3b-9145-24e96ca481e7" /></p>
+
+        ## Lecture-45: SKY130RTL D5SK3 L2 Lab incomplete overlapping Case part2
+
+        ```
+        iverilog tb_incomp_case.v incomp_case.v
+        ./a.out
+        gtkwave tb_incomp_case.vcd
+        ```
+        <p align="center"><img width="1918" height="922" alt="image" src="https://github.com/user-attachments/assets/6f8ad8bb-5962-4179-bf13-b40252e60140" /></p>
+
+        ```
+        yosys
+        yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+        yosys > read_verilog comp_case.v
+        yosys > synth -top comp_case
+        ```
+        <p align="center"><img width="582" height="320" alt="image" src="https://github.com/user-attachments/assets/3ababe5e-3dd3-43fb-8a94-2c4c74d18a6f" /></p>
+
+        ```
+        yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+        yosys > show
+        ```
+        <p align="center"><img width="1917" height="922" alt="image" src="https://github.com/user-attachments/assets/e0f69c6f-3591-4de1-97af-d3a569f24fd0" /></p>
+
+        
+
+        
+        
+
+        
+
+
+        
 
         
         
