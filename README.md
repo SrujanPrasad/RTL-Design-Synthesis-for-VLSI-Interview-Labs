@@ -1158,6 +1158,43 @@
         ```
         <p align="center"><img width="1917" height="922" alt="image" src="https://github.com/user-attachments/assets/e0f69c6f-3591-4de1-97af-d3a569f24fd0" /></p>
 
+        ## Lecture-46: SKY130RTL D5SK3 L3 Lab incomplete overlapping Case part3
+
+        ```
+        iverilog tb_partial_case_assign.v partial_case_assign.v
+        ./a.out
+        gtkwave tb_partial_case_assign.v.vcd
+        ```
+        <p align="center"><img width="1918" height="926" alt="image" src="https://github.com/user-attachments/assets/ef9d9130-b3fa-4712-95c0-60e7568624ec" /></p>
+
+        ```
+        yosys
+        yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+        yosys > read_verilog partial_case_assign.v
+        yosys > synth -top partial_case_assign
+        ```
+        <p align="center"><img width="548" height="337" alt="image" src="https://github.com/user-attachments/assets/d6d16df3-5626-435b-9ad4-fe389bac0388" /></p>
+
+        ```
+        yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+        yosys > show
+        ```
+        <p align="center"><img width="1918" height="921" alt="image" src="https://github.com/user-attachments/assets/9229811e-7320-40b9-b025-b77da4598878" /></p>
+
+        
+
+        
+
+        
+
+        
+
+        
+        
+        
+
+        
+
         
 
         
