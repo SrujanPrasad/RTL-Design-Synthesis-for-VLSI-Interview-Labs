@@ -48,7 +48,7 @@
 
   ## Lecture-2: SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1
 
-  In this lab a good_mux.v is simulated and code is as follows :
+  In this lab, a good_mux.v is simulated, and the code is as follows :
 
   ```
   iverilog good_mux.v tb_good_mux.v
@@ -1054,6 +1054,111 @@
       - Incomplete "**case**" statements also lead to inferred latches (if no default statement present)
 
       <p align="center"><img width="891" height="501" alt="image" src="https://github.com/user-attachments/assets/d3e3afa0-8da5-44bb-96b7-bd303b1ec1f3" /></p>
+
+      ## Lecture-41: SKY130RTL D5SK1 L3 IF CASE Constructs part3
+
+      - Partial Assignments in case :
+        - We must assign all the outputs in the case conditions.
+        - There should be no overlapping case statements.
+
+      ## Lecture-42: SKY130RTL D5SK2 L1 Lab Incomplete IF part1
+
+      - Working on incomp_if.v : (Nothing but a D latch)
+
+        ```
+        iverilog tb_incomp_if.v incomp_if.v
+        ./a.out
+        gtkwave tb_incomp_if.vcd
+        ```
+        <p align="center"><img width="1917" height="912" alt="image" src="https://github.com/user-attachments/assets/1a15841e-701c-406a-91f2-15f6ea7ca38e" /></p>
+
+        ```
+        yosys
+        yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+        yosys > read_verilog incomp_if.v
+        yosys > synth -top incomp_if
+        ```
+        <p align="center"><img width="461" height="251" alt="image" src="https://github.com/user-attachments/assets/5237350b-70f3-4482-9aa4-0bceb643df36" /></p>
+
+        ```
+        yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+        yosys > show
+        ```
+        <p align="center"><img width="1918" height="947" alt="image" src="https://github.com/user-attachments/assets/f58db307-5e35-4581-8e78-986033f19d1a" /></p>
+
+        ## Lecture-43: SKY130RTL D5SK2 L2 Lab Incomplete IF part2
+
+      - Working on incomp_if2.v : (D latch with enable controlled by a combinational logic)
+
+        ```
+        iverilog tb_incomp_if.v incomp_if.v
+        ./a.out
+        gtkwave tb_incomp_if.vcd
+        ```
+        <p align="center"><img width="1918" height="922" alt="image" src="https://github.com/user-attachments/assets/4b377f79-06e1-4bdb-8d21-3812abd8dcc4" /></p>
+
+        ```
+        yosys
+        yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+        yosys > read_verilog incomp_if.v
+        yosys > synth -top incomp_if
+        ```
+        <p align="center"><img width="505" height="276" alt="image" src="https://github.com/user-attachments/assets/54d2c8e2-49be-43cf-b1eb-eb6c06f67272" /></p>
+
+        ```
+        yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+        yosys > show
+        ```
+        <p align="center"><img width="1918" height="912" alt="image" src="https://github.com/user-attachments/assets/a482e0b3-4522-4019-b6f7-6240a16c824f" /></p>
+
+        ## Lecture-44: SKY130RTL D5SK3 L1 Lab incomplete overlapping Case part1
+
+      - Working on incomp_case.v :
+        ```
+        iverilog tb_incomp_case.v incomp_case.v
+        ./a.out
+        gtkwave tb_incomp_case.vcd
+        ```
+        <p align="center"><img width="1918" height="918" alt="image" src="https://github.com/user-attachments/assets/49eaa34c-bcad-471b-84a9-619038b91629" /></p>
+
+        ```
+        yosys
+        yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+        yosys > read_verilog incomp_case.v
+        yosys > synth -top incomp_case
+        ```
+        <p align="center"></p>
+
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        
+        
+
+        
+
+
+      
+
+      
+      
+
+      
 
 
 
