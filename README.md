@@ -1257,7 +1257,23 @@
         endmodule
         ```
 
-       - 
+       - Generate for loop: This is mainly for replicating the hardware.
+
+         ```
+         genvar i;
+         generate
+             for(i=0;i<8;i=i+1)
+               begin
+                 and u_and(.a(a[i]),.b(b[i]),.y(y[i]));
+               end
+         endgenerate
+         ```
+         <p align="center"><img width="862" height="287" alt="image" src="https://github.com/user-attachments/assets/22f216fd-7b97-4d14-a475-b1d9eef55705" /></p>
+
+
+         
+                 
+         
           
 
         
