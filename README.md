@@ -1394,50 +1394,31 @@
     ```
     <p align="center"><img width="1918" height="925" alt="image" src="https://github.com/user-attachments/assets/835782d1-bc88-4caf-bc0f-df730d9d42e4" /></p>
 
-    
+    ```
+    yosys
+    yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+    yosys > read_verilog  fa.v rca.v
+    yosys > synth -top  rca
+    ```
 
-  
+<p align="center"><img width="1916" height="875" alt="image" src="https://github.com/user-attachments/assets/301c0b05-6257-4387-85c1-34b9156f751c" /></p>
 
-   
+  ```
+  yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  yosys > write_verilog -noattr rca_net.v
+  yosys > show rca
+  ```
 
-      
+  <p align="center"><img width="1917" height="955" alt="image" src="https://github.com/user-attachments/assets/3e5bf18c-ea8c-493f-a098-78b1fd9a5fc9" /></p>
 
-  
+  To perform GLS :
 
-        
-
-        
-
-
-        
-
-
-        
-
-       
-
-
-         
-
-
-        
-
-        
-
-
-             
-        
-        
-
-
-         
-                 
-         
-          
-
-        
-        
-
+    ```
+    iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v rca_net.v tb_rca.v
+    ./a.out
+    gtkwave tb_rc.vcd
+    ```
+  <p align="center"><img width="1913" height="950" alt="image" src="https://github.com/user-attachments/assets/3211a6a9-c908-46e7-a6d1-014d457b5d59" /></p>
   </details>
 
    
