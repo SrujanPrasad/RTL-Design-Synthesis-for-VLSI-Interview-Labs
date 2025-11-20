@@ -1219,6 +1219,48 @@
        gtkwave tb_bad_case.vcd
        ```
        <p align="center"><img width="1918" height="920" alt="image" src="https://github.com/user-attachments/assets/3bf43188-f8dc-4c63-b9b5-892119272cfd" /></p>
+
+       ## Lecture-48: SKY130RTL D5SK4 L1 For Loop and For Generate part1
+
+      - A for loop is used inside the always block, whereas the generate for loop is not used inside the always block.
+      - Generate for loop to instantiate hardware. To instantiate an AND gate 100 times, we use the generate for loop.
+      - Example of for loop (32:1 mux) :
+        ```
+        module mux32_1(input [31:0]in, input sel, output y);
+        integer i;
+        always @(*)
+          begin
+            for(i=0;i<32;i=i+1)
+              begin
+                  if(i==sel)
+                    y=in[i];
+              end
+          end
+        endmodule
+        ```
+
+        ## Lecture-48: SKY130RTL D5SK4 L2 For Loop and For Generate part2
+
+        - 1:8 Demux :
+         ```
+        module demux18(input in, input sel, output [7:0]y);
+        integer i;
+         y=8'b0;
+         always @(*)
+          begin
+            for(i=0;i<8;i=i+1)
+              begin
+                  if(i==sel)
+                    y[i]=in;
+              end
+          end
+        endmodule
+        ```
+
+       - 
+          
+
+        
         
 
         
