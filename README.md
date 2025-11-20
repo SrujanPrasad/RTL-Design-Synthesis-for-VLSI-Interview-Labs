@@ -1222,7 +1222,7 @@
 
        ## Lecture-48: SKY130RTL D5SK4 L1 For Loop and For Generate part1
 
-      - A for loop is used inside the always block, whereas the generate for loop is not used inside the always block.
+      - A for loop is used inside the always block (a simple way of generating large hardware), whereas the generate for loop is not used inside the always block.
       - Generate for loop to instantiate hardware. To instantiate an AND gate 100 times, we use the generate for loop.
       - Example of for loop (32:1 mux) :
         ```
@@ -1270,6 +1270,58 @@
          ```
          <p align="center"><img width="862" height="287" alt="image" src="https://github.com/user-attachments/assets/22f216fd-7b97-4d14-a475-b1d9eef55705" /></p>
 
+        ## Lecture-49: SKY130RTL D5SK5 L1 Lab For and For Generate part1
+
+      - Working on mux_generate.v:
+        ```
+        iverilog mux_generate.v tb_mux_generate.v
+        ./a.out
+        gtkwave tb_mux_generate.vcd
+        ```
+
+        <p align="center"><img width="1918" height="917" alt="image" src="https://github.com/user-attachments/assets/589030e5-cf4b-44a3-a5c2-37e143d0d76f" /></p>
+
+        ```
+        yosys
+        yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+        yosys > read_verilog mux_generate.v
+        yosys > synth -top mux_generate
+        ```
+
+        <p align="center"><img width="491" height="297" alt="image" src="https://github.com/user-attachments/assets/fd878a64-34a0-4bc4-99d9-005bcbb8c235" /></p>
+
+        ```
+        yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+        yosys > write_verilog -noattr mux_generate_net.v
+        yosys > show
+        ```
+
+         <p align="center"><img width="1917" height="945" alt="image" src="https://github.com/user-attachments/assets/85de579f-0baf-40bf-9414-62635d2b2899" /></p>
+
+      To perform GLS :
+
+       ```
+       iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v mux_generate_net.v tb_mux_generate.v
+       ./a.out
+       gtkwave tb_mux_generate.vcd
+       ```
+       <p align="center"><img width="1917" height="917" alt="image" src="https://github.com/user-attachments/assets/75ee1e96-84b6-4a0a-ade4-e13ad3536de4" /></p>
+
+       
+
+
+         
+
+
+        
+
+        
+
+
+             
+        
+        
+
 
          
                  
@@ -1278,84 +1330,6 @@
 
         
         
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-        
-        
-
-        
-
-        
-
-        
-        
-
-        
-
-
-        
-
-        
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-        
-        
-
-        
-
-
-      
-
-      
-      
-
-      
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   </details>
 
