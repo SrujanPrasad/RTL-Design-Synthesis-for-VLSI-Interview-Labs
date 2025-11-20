@@ -1270,7 +1270,7 @@
          ```
          <p align="center"><img width="862" height="287" alt="image" src="https://github.com/user-attachments/assets/22f216fd-7b97-4d14-a475-b1d9eef55705" /></p>
 
-        ## Lecture-50: SKY130RTL D5SK5 L1 Lab For and For Generate part1
+        ## Lecture-51: SKY130RTL D5SK5 L1 Lab For and For Generate part1
 
       - Working on mux_generate.v:
         ```
@@ -1307,7 +1307,7 @@
        ```
        <p align="center"><img width="1917" height="917" alt="image" src="https://github.com/user-attachments/assets/75ee1e96-84b6-4a0a-ade4-e13ad3536de4" /></p>
 
-       ## Lecture-51: SKY130RTL D5SK5 L2 Lab For and For Generate part2
+       ## Lecture-52: SKY130RTL D5SK5 L2 Lab For and For Generate part2
 
       - Working on demux_case.v :
         ```
@@ -1378,6 +1378,29 @@
        gtkwave tb_demux_generate.vcd
        ```
   <p align="center"><img width="1915" height="922" alt="image" src="https://github.com/user-attachments/assets/a0159fa3-c9dc-433f-a13d-4a85e4007a67" /></p>
+
+
+    ## Lecture-53: SKY130RTL D5SK5 L3 Lab For and For Generate part3
+
+    - Working on rca.v :
+
+      <p align="center"><img width="643" height="358" alt="image" src="https://github.com/user-attachments/assets/a079b7c9-e027-4e2f-bf9b-1f075e37ceb3" /></p>
+
+    ## Lecture-54: SKY130RTL D5SK5 L4 Lab For and For Generate part4
+    ```
+    iverilog fa.v rca.v tb_rca.v
+    ./a.out
+    gtkwave tb_rca.vcd
+    ```
+    <p align="center"><img width="1918" height="925" alt="image" src="https://github.com/user-attachments/assets/835782d1-bc88-4caf-bc0f-df730d9d42e4" /></p>
+
+    
+
+  
+
+   
+
+      
 
   
 
