@@ -1239,7 +1239,7 @@
         endmodule
         ```
 
-        ## Lecture-48: SKY130RTL D5SK4 L2 For Loop and For Generate part2
+        ## Lecture-49: SKY130RTL D5SK4 L2 For Loop and For Generate part2
 
         - 1:8 Demux :
          ```
@@ -1270,7 +1270,7 @@
          ```
          <p align="center"><img width="862" height="287" alt="image" src="https://github.com/user-attachments/assets/22f216fd-7b97-4d14-a475-b1d9eef55705" /></p>
 
-        ## Lecture-49: SKY130RTL D5SK5 L1 Lab For and For Generate part1
+        ## Lecture-50: SKY130RTL D5SK5 L1 Lab For and For Generate part1
 
       - Working on mux_generate.v:
         ```
@@ -1306,6 +1306,90 @@
        gtkwave tb_mux_generate.vcd
        ```
        <p align="center"><img width="1917" height="917" alt="image" src="https://github.com/user-attachments/assets/75ee1e96-84b6-4a0a-ade4-e13ad3536de4" /></p>
+
+       ## Lecture-51: SKY130RTL D5SK5 L2 Lab For and For Generate part2
+
+      - Working on demux_case.v :
+        ```
+        iverilog demux_case.v tb_demux_case.v
+        ./a.out
+        gtkwave tb_demux_case.vcd
+        ```
+
+        <p align="center"><img width="1918" height="927" alt="image" src="https://github.com/user-attachments/assets/18bf0028-920f-4f08-b126-067a2a1269a6" /></p>
+
+        ```
+        yosys
+        yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+        yosys > read_verilog  demux_case.v
+        yosys > synth -top  demux_case
+        ```
+
+        <p align="center"><img width="507" height="365" alt="image" src="https://github.com/user-attachments/assets/648e2894-b148-4911-94f3-1a9e28ca30d1" /></p>
+
+        ```
+        yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+        yosys > write_verilog -noattr demux_case_net.v
+        yosys > show
+        ```
+
+        <p align="center"><img width="1918" height="947" alt="image" src="https://github.com/user-attachments/assets/cc811e54-5323-43a3-bf4e-7575f896141e" /></p>
+
+      To perform GLS :
+
+       ```
+       iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v demux_case_net.v tb_demux_case.v
+       ./a.out
+       gtkwave tb_demux_case.v
+       ```
+       <p align="center"><img width="1918" height="917" alt="image" src="https://github.com/user-attachments/assets/0de58663-c4aa-4974-bfb3-e9dce1e51ddd" /></p>
+
+     - Working on demux_generate.v :
+        ```
+        iverilog demux_case.v tb_demux_generate.v
+        ./a.out
+        gtkwave tb_demux_case.vcd
+        ```
+
+        <p align="center"><img width="1918" height="916" alt="image" src="https://github.com/user-attachments/assets/88935ebe-40ae-49d2-beb0-fb393999755d" /></p>
+
+        ```
+        yosys
+        yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+        yosys > read_verilog  demux_generate.v
+        yosys > synth -top  demux_generate
+        ```
+
+        <p align="center"><img width="533" height="311" alt="image" src="https://github.com/user-attachments/assets/2376aeba-2f67-46a2-bde4-b2e751bacc28" /></p>
+
+        ```
+        yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+        yosys > write_verilog -noattr demux_generate_net.v
+        yosys > show
+        ```
+
+        <p align="center"><img width="1912" height="923" alt="image" src="https://github.com/user-attachments/assets/42fd64aa-4703-4c1d-88ae-755fdeec3b11" /></p>
+
+    To perform GLS :
+
+       ```
+       iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v demux_generate_net.v tb_demux_generate.v
+       ./a.out
+       gtkwave tb_demux_generate.vcd
+       ```
+  <p align="center"><img width="1915" height="922" alt="image" src="https://github.com/user-attachments/assets/a0159fa3-c9dc-433f-a13d-4a85e4007a67" /></p>
+
+  
+
+        
+
+        
+
+
+        
+
+
+        
 
        
 
