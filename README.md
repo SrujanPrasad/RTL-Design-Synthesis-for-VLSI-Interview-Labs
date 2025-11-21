@@ -89,15 +89,15 @@ The notes are organized day-wise with:
   <p align="center"><img width="1870" height="977" alt="image" src="https://github.com/user-attachments/assets/45c79362-888b-4d9c-a13a-205d85e860e7" /></p>
   <p align="center"><img width="1192" height="647" alt="image" src="https://github.com/user-attachments/assets/b00d5f5c-df00-435f-b29d-1339bcd3e470" /></p>
 
-   ## Lecture-5: SKY130RTL D1SK3 L2 introduction to logic synthesis part1
+  ## Lecture-5: SKY130RTL D1SK3 L2 introduction to logic synthesis part1
   - RTL Design is a behavioural specification of the required design.
   - RTL to gate-level synthesis is called as the netlist.
-  - .lib is the collection/bucket of all the logic cells. (AND, OR, NOT)
+  - .lib is the collection/bucket of all the logic cells. (AND, OR, NOT).
+  - To ensure that there are no hold issues in the circuit, we need cells that work slowly.
+    
   <p align="center"><img width="895" height="607" alt="image" src="https://github.com/user-attachments/assets/20f16684-c757-4f85-aef9-1cbd9d5a2589" /></p>
 
-  - To ensure that there are no hold issues in the circuit, we need cells that work slowly.
-
-   ## Lecture-6: SKY130RTL D1SK3 L3 introduction to logic synthesis part2
+  ## Lecture-6: SKY130RTL D1SK3 L3 introduction to logic synthesis part2
 
     - **Setup time** is the time before the clock edge at which the data remains stable.
     - **Hold time** is the time after the clock edge at which the data remains stable.
@@ -107,7 +107,7 @@ The notes are organized day-wise with:
 
   <p align="center"><img width="906" height="662" alt="image" src="https://github.com/user-attachments/assets/6e1fc570-12b9-4ddd-a696-27f3cbc48a31" /></p>
 
-  ## Lecture-7: SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1
+## Lecture-7: SKY130RTL D1SK4 L1 Lab3 Yosys 1 good mux Part1 (Lab 2)
 
   Commands to run :
   ```
@@ -118,7 +118,7 @@ The notes are organized day-wise with:
   yosys
   ```
   ```
-  yosys> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
   ```
   ```
   yosys > read_verilog good_mux.v
@@ -126,8 +126,6 @@ The notes are organized day-wise with:
   ```
   yosys > synth -top good_mux
   ```
-  <p align="center"><img width="1918" height="916" alt="image" src="https://github.com/user-attachments/assets/32fa8e4e-4561-48d2-b48c-7f2ccd9d8833" /></p>
-
   <p align="center"><img width="990" height="372" alt="image" src="https://github.com/user-attachments/assets/9d8bb860-b25c-4c49-a163-d1695669c188" /></p>
 
   ```
@@ -139,16 +137,14 @@ The notes are organized day-wise with:
   show
   ```
   The equivalent netlist will be opened.
-
-  <p align="center"><img width="1911" height="622" alt="image" src="https://github.com/user-attachments/assets/0d093de1-8f57-4436-b713-953afaf0885c" /></p>
-
+  
   <p align="center"><img width="1918" height="708" alt="image" src="https://github.com/user-attachments/assets/b3a2d1e3-bf0c-4e48-a41e-eb506039386b" /></p>
   
-   ## Lecture-8: SKY130RTL D1SK4 L2 Lab3 Yosys 1 good mux Part2
+## Lecture-8: SKY130RTL D1SK4 L2 Lab3 Yosys 1 good mux Part2
    Here, the sky130_fd_sc_hd_mux2_1 standard cell library is used. with three input signals for i0, i1 and sel and one output signal y.
   <p align="center"><img width="888" height="341" alt="image" src="https://github.com/user-attachments/assets/81e5ca6a-4cf1-42ea-8fb5-9984e55efd4e" /></p>
 
-   ## Lecture-9: SKY130RTL D1SK4 L2 Lab3 Yosys 1 good mux Part2
+## Lecture-9: SKY130RTL D1SK4 L2 Lab3 Yosys 1 good mux Part2 (Lab 3)
 
    To open the netlist file
 
@@ -160,21 +156,17 @@ The notes are organized day-wise with:
    yosys > !gvim good_mux_netlist.v
    ```
 
-   <p align="center"><img width="1918" height="907" alt="image" src="https://github.com/user-attachments/assets/151a2ec8-2393-4a45-9a22-fdcd896f24b0" /></p>
+  <p align="center"><img width="1918" height="946" alt="image" src="https://github.com/user-attachments/assets/e9cb9c74-2d0a-43b1-9efb-299a803e7cd9" /></p>
 
-   <p align="center"><img width="1918" height="946" alt="image" src="https://github.com/user-attachments/assets/e9cb9c74-2d0a-43b1-9efb-299a803e7cd9" /></p>
-
-    ```
+   ```
    yosys > write_verilog -noattr good_mux_netlist.v
    ```
 
    ```
    yosys > !gvim good_mux_netlist.v
    ```
-    
-   <p align="center"><img width="956" height="248" alt="image" src="https://github.com/user-attachments/assets/84bc9823-c701-4167-aeb3-8b4d3cd3fa9c" /></p>
 
-   <p align="center"><img width="1918" height="945" alt="image" src="https://github.com/user-attachments/assets/ac49a929-6844-49c0-8c32-16549e3ca720" /></p>
+  <p align="center"><img width="1918" height="945" alt="image" src="https://github.com/user-attachments/assets/ac49a929-6844-49c0-8c32-16549e3ca720" /></p>
 
   </details>
   
