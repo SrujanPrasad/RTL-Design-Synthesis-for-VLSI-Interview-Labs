@@ -1,19 +1,5 @@
 # RTL-Design-Synthesis-for-VLSI-Interview-Labs
 
-## Table of Contents : 
-### 1. Overview
-### 2. Tools & Technology
-### 3. Environment Setup
-   - Lab setup on Codespace
-   - Lab Environment Setup on Ubuntu
-### 4. Day-wise Labs & Learnings
-   - Day 1 – Introduction to Verilog RTL design, simulation and synthesis
-   - Day 2 – Timing libs, Hierarchical vs Flat Synthesis, efficient flop coding styles
-   - Day 3 – Combinational & Sequential Optimizations
-   - Day 4 – Gate-Level Simulation & Mismatches
-   - Day 5 – Optimizations in synthesis, IF/CASE, Loops,and  Generate Constructs
-### 5.Acknowledgements
-
 ## Overview : 
 This repository documents hands-on labs and learnings from the **“RTL Design & Synthesis using SKY130”** workshop, focused on:
 
