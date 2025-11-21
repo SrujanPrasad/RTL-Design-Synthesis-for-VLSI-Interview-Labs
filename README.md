@@ -1,6 +1,6 @@
 # RTL-Design-Synthesis-for-VLSI-Interview-Labs
 
-## Overview : 
+## 1. Overview : 
 This repository documents hands-on labs and learnings from the **“RTL Design & Synthesis using SKY130”** workshop, focused on:
 
 - RTL coding in Verilog
@@ -14,13 +14,17 @@ The notes are organized day-wise with:
 - Netlists/diagrams generated  
 - Key learnings & interview-ready points
 
+## 2. Tools & Technology
 
+- **Simulator**: iverilog  
+- **Waveform Viewer**: GTKWave  
+- **Synthesis Tool**: Yosys  
+- **Standard Cell Library**: SKY130 HD (`sky130_fd_sc_hd__tt_025C_1v80.lib`)  
+- **Editor**: gVim  
+- **Platform**: Lab Environment Setup on Ubuntu via Terminal
 
-
-
-<details>
-  <summary> Setting up the environment on Codespace </summary>
-  
+## 3. Environment Setup 
+  ### Option 1: On GitHub Codespaces
 - Codespace creation :
 <p align="center">
 <img width="496" height="342" alt="image" src="https://github.com/user-attachments/assets/ec58ede0-7248-4131-9db5-c20758739dc5" />
@@ -46,6 +50,12 @@ The notes are organized day-wise with:
   ```
  <p align="center"> <img width="1027" height="642" alt="image" src="https://github.com/user-attachments/assets/eecc4ffe-e136-4143-ab56-397b3ede8a05" /> </p>
  <p align="center"> <img width="1598" height="847" alt="image" src="https://github.com/user-attachments/assets/56d0e44a-6c96-4738-bdb9-95df5b42c8b9" /> </p>
+
+
+
+
+
+
 
 
 </details>
