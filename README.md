@@ -1407,6 +1407,18 @@ endmodule
   <p align="center"><img width="1913" height="950" alt="image" src="https://github.com/user-attachments/assets/3211a6a9-c908-46e7-a6d1-014d457b5d59" /></p>
   </details>
 
+  ## 5. ACKNOWLEDGEMENTS : 
+
+  I would like to express my sincere gratitude to the following organizations and individuals whose efforts made this workshop and learning experience possible:
+
+- [**VLSI System Design (VSD Corp. Pvt. Ltd.)**](https://github.com/vsdip)  
+  For providing the complete workshop framework, hands-on labs, and continuous support throughout the RTL Design & Synthesis course.
+
+- [**Kunal Ghosh (Co-Founder, VSD)**](https://github.com/kunalg123)  
+  For his support and for enabling open-source VLSI education for students and professionals worldwide.
+
+- [**Shon Taware(Course instructor)**](https://github.com/ShonTaware)
+  For his detailed and beginner-friendly explanations, and for conducting all the labs in a clear and seamless manner.
    
     
     
