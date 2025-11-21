@@ -41,7 +41,7 @@ The notes are organized day-wise with:
 <details>
   <summary><strong>DAY-1</strong></summary>
   
-  ## Lecture-0: SKY130RTL D1SK1 L1 Introduction to iverilog design test bench
+## Lecture-0: SKY130RTL D1SK1 L1 Introduction to iverilog design test bench
   
 - **RTL design** simulator is a tool used for verifying the functionality of the design.
 - **Design** is the actual module that is implemented, whereas the **testbench** is for verifying the design by considering various test cases.
@@ -53,7 +53,7 @@ The notes are organized day-wise with:
   Installation and cloning of all the necessary repositories required for running the labs. A folder named vsdrtlworkshop is created, and the sky130RTLSynthesisAndDesign repository is cloned into it.
   <p align="center"> <img width="1918" height="917" alt="image" src="https://github.com/user-attachments/assets/25a2f94e-867d-45f0-b1ca-9f98a97c0932" /> </p>
 
-  ## Lecture-2: SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1 (Lab 1)
+## Lecture-2: SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1 (Lab 1)
 
   In this lab, `good_mux.v` is simulated, and the code is as follows :
 
@@ -75,7 +75,7 @@ The notes are organized day-wise with:
   The results are as follows :
   <p align="center"><img width="1917" height="918" alt="image" src="https://github.com/user-attachments/assets/a4e3ac22-84c1-4e68-b2ab-85ce11b5e765" /></p>
 
-  ## Lecture-3: SKY130RTL D1SK2 L3 Lab2 Introduction iverilog gtkwave part2
+## Lecture-3: SKY130RTL D1SK2 L3 Lab2 Introduction iverilog gtkwave part2
   
   To open the code editor :
   ```
@@ -173,7 +173,7 @@ The notes are organized day-wise with:
   <details>
     <summary>DAY-2</summary>
     
-   ## Lecture-10: SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1
+## Lecture-10: SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1
 
   ```
   gvim ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
@@ -185,7 +185,7 @@ The notes are organized day-wise with:
   - 025C is the temperature. (PVT - Process Variation Temperature -determines whether the silicon works faster or slower)
   - 1v80 indicates the voltage.
 
-   ## Lecture-11: SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2
+## Lecture-11: SKY130RTL D2SK1 L2 Lab4 Introduction to dot Lib part2
 
   - CMOS technology.
   - The delay model is a  look-up table.
@@ -205,7 +205,7 @@ The notes are organized day-wise with:
     <p align="center"><img width="1918" height="952" alt="image" src="https://github.com/user-attachments/assets/bb9354c2-f405-4089-9a53-52774ae324bb" /></p>
 
     
-  ## Lecture-12: SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3
+## Lecture-12: SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3
   - To consider even a simpler example of  **and2_0**
     ```
     /cell .*and
@@ -218,92 +218,90 @@ The notes are organized day-wise with:
     <p align="center"><img width="1917" height="936" alt="image" src="https://github.com/user-attachments/assets/023414ce-e31d-4d49-ab16-fd5fd9c56ca3" /></p>
 
 
-    ## Lecture-13: SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1
+## Lecture-13: SKY130RTL D2SK2 L1 Lab05 Hier synthesis flat synthesis part1
 
-    The file used in this lab is the multiple_modules.v
+  The file used in this lab is the multiple_modules.v
 
-    ```
-    cd verilog_files
-    gvim multiple_modules.v
-    ```
+  ```
+  cd verilog_files
+  gvim multiple_modules.v
+  ```
 
-    <p align="center"> <img width="1250" height="622" alt="image" src="https://github.com/user-attachments/assets/722ea4fd-37f5-4843-8ffe-dc6568daf95f" /> </p>
+  <p align="center"> <img width="1250" height="622" alt="image" src="https://github.com/user-attachments/assets/722ea4fd-37f5-4843-8ffe-dc6568daf95f" /> </p>
 
-    to run yosys for the multiple_modules.v file
+  to run yosys for the multiple_modules.v file
 
-    ```
-    cd verilog_files
-    yosys
-    ```
+  ```
+  cd verilog_files
+  yosys
+  ```
 
-    ```
-    yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-    yosys > read_verilog multiple_modules.v
-    yosys > synth -top multiple_modules
-    yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-    ```
+  ```
+  yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  yosys > read_verilog multiple_modules.v
+  yosys > synth -top multiple_modules
+  yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  ```
 
-    <p align="center"> <img width="783" height="815" alt="image" src="https://github.com/user-attachments/assets/ae77278f-ae0c-4d36-8ff4-0c9e4e21ad1d" /></p>
-    <p align="center"><img width="1918" height="908" alt="image" src="https://github.com/user-attachments/assets/a0542d59-14ff-47af-b564-9dbdd26ef9c0" /></p>
+  <p align="center"> <img width="783" height="815" alt="image" src="https://github.com/user-attachments/assets/ae77278f-ae0c-4d36-8ff4-0c9e4e21ad1d" /></p>
+  <p align="center"><img width="1918" height="908" alt="image" src="https://github.com/user-attachments/assets/a0542d59-14ff-47af-b564-9dbdd26ef9c0" /></p>
 
 
-    since there are multiple modules :
-    ```
-    show multiple_modules
-    ```
-    <p align="center"><img width="1918" height="948" alt="image" src="https://github.com/user-attachments/assets/f9ee3021-670a-4752-bdae-9e3adce6afaa" /></p>
+  since there are multiple modules :
+  ```
+  show multiple_modules
+  ```
+  <p align="center"><img width="1918" height="948" alt="image" src="https://github.com/user-attachments/assets/f9ee3021-670a-4752-bdae-9e3adce6afaa" /></p>
 
-    To write the same :
+  To write the same :
 
-    ```
-    yosys > write_verilog -noattr multiple_modules_hier.v
-    yosys > !gvim multiple_modules_hier.v
-    ```
+  ```
+  yosys > write_verilog -noattr multiple_modules_hier.v
+  yosys > !gvim multiple_modules_hier.v
+  ```
 
-    <p align="center"> <img width="1917" height="962" alt="image" src="https://github.com/user-attachments/assets/2559a35f-bb24-4241-a5cd-957710b21f45" /></p>
+  <p align="center"> <img width="1917" height="962" alt="image" src="https://github.com/user-attachments/assets/2559a35f-bb24-4241-a5cd-957710b21f45" /></p>
 
   - NAND is preferred because of the stacked nMOS (two nMOS in series) over NOR (having stacked pMOS, which is bad).
  
-  ## Lecture-14: SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2
+## Lecture-14: SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2
+- To flatten out the netlist :
+  ```
+  yosys > flatten
+  yosys > write_verilog -noattr multiple_modules.flat.v
+  yosys > !gvim multiple_modules.flat.v
+  ```
+  <p align="center"> <img width="1917" height="972" alt="image" src="https://github.com/user-attachments/assets/d6919b7e-3be3-4443-998a-76a21dd61714" /></p>
 
-  - To flatten out the netlist :
-    ```
-    yosys > flatten
-    yosys > write_verilog -noattr multiple_modules.flat.v
-    yosys > !gvim multiple_modules.flat.v
-    ```
-    <p align="center"> <img width="1917" height="972" alt="image" src="https://github.com/user-attachments/assets/d6919b7e-3be3-4443-998a-76a21dd61714" /></p>
+  Netlist after flattening :
 
-    Netlist after flattening :
+  <p align="center"><img width="1918" height="985" alt="image" src="https://github.com/user-attachments/assets/ee3cfbbd-c00a-46b7-9c19-e6aba47ea626" /></p>
 
-    <p align="center"><img width="1918" height="985" alt="image" src="https://github.com/user-attachments/assets/ee3cfbbd-c00a-46b7-9c19-e6aba47ea626" /></p>
+  To perform sub-module synthesis :
 
-    To perform sub-module synthesis :
+  ```
+  yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  yosys > read_verilog multiple_modules.v
+  yosys > synth -top sub_module1
+  yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+  yosys > show
+  ```
+  <p align="center"><img width="1918" height="936" alt="image" src="https://github.com/user-attachments/assets/7b015ede-e5f9-47e1-b122-505ce9be042a" /></p>
 
-    ```
-    yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-    yosys > read_verilog multiple_modules.v
-    yosys > synth -top sub_module1
-    yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-    yosys > show
-    ```
-    <p align="center"><img width="1918" height="936" alt="image" src="https://github.com/user-attachments/assets/7b015ede-e5f9-47e1-b122-505ce9be042a" /></p>
-
-    - Module level is preferred when we have multiple modules and want to incorporate the **divide and conquer** approach(hierarchical design)
+  - Module level is preferred when we have multiple modules and want to incorporate the **divide and conquer** approach(hierarchical design)
    
     
-    ## Lecture-15: SKY130RTL D2SK3 L1 Why Flops and Flop coding styles part1
+ ## Lecture-15: SKY130RTL D2SK3 L1 Why Flops and Flop coding styles part1
+  - A glitch is the momentary change of output.
+  <p align="center"><img width="617" height="628" alt="image" src="https://github.com/user-attachments/assets/f60db8c0-5896-441b-a6c2-53f4a0d90638" /></p>
 
-    - A glitch is the momentary change of output.
-    <p align="center"><img width="617" height="628" alt="image" src="https://github.com/user-attachments/assets/f60db8c0-5896-441b-a6c2-53f4a0d90638" /></p>
+  - Why Flops? - To reduce glitches so that the output changes only on the edge of the clock. Control pins for resetting or presetting the flop are present.
 
-    - Why Flops? - To reduce glitches so that the output changes only on the edge of the clock. Control pins for resetting or presetting the flop are present.
+ ## Lecture-16: SKY130RTL D2SK3 L2 Why Flops and Flop coding styles part2
 
-    ## Lecture-16: SKY130RTL D2SK3 L2 Why Flops and Flop coding styles part2
-
-    -  always block gets executed whenever there is a change in the clock or reset.
-    -  **Asynchronous reset** is the reset that is independent of the clock signal.
-      ```
+  -  always block gets executed whenever there is a change in the clock or reset.
+  -  **Asynchronous reset** is the reset that is independent of the clock signal.
+    ```
     module dff_asyn_res(input clk,d,output q);
       always @(posedge clk or posedge rst)
       begin
@@ -315,9 +313,9 @@ The notes are organized day-wise with:
           q<=d;
       end
     endmodule
-      ```
-    -  **Synchronous reset** is the reset that is dependent on the clock signal.
-      ```
+    ```
+   - **Synchronous reset** is the reset that is dependent on the clock signal.
+    ```
     module dff_syn_res(input clk,d,output q);
       always @(posedge clk)
       begin
@@ -329,27 +327,27 @@ The notes are organized day-wise with:
           q<=d;
       end
     endmodule
-      ```
+    ```
 
-    ## Lecture-17: SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1
+  ## Lecture-17: SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1
 
-    To simulate all the designs :
+  To simulate all the designs :
 
-    - Asynchronous reset : 
+  - Asynchronous reset : 
       <p align="center"><img width="1918" height="611" alt="image" src="https://github.com/user-attachments/assets/badd4da5-84cf-456a-b2da-76b57957fa47" /></p>
       <p align="center"> <img width="1916" height="946" alt="image" src="https://github.com/user-attachments/assets/7946720e-dcdb-46c2-bb2c-717d667c68ea" /></p>
 
-    - Asynchronous set :
+  - Asynchronous set :
 
       <p align="center"><img width="1918" height="618" alt="image" src="https://github.com/user-attachments/assets/e4770bc7-a8f4-4ef9-93e0-8498c247cadb" /></p>
       <p align="center"><img width="1918" height="950" alt="image" src="https://github.com/user-attachments/assets/2ca82aa0-e542-4005-91af-b674d67ead88" /></p>
 
-    - Synchronous reset : 
+  - Synchronous reset : 
       <p align="center"><img width="1918" height="682" alt="image" src="https://github.com/user-attachments/assets/c9aa14fb-ea2c-42dc-8fc1-1705b275de1e" /></p>
       <p align="center"><img width="1918" height="947" alt="image" src="https://github.com/user-attachments/assets/5b9c5ed3-b3f5-403a-a1d7-8566cb99d057" /></p>
 
 
-    ## Lecture-18: SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2
+  ## Lecture-18: SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2
 
     - Asynchronous reset
    
