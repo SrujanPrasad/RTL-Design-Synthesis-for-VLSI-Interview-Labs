@@ -25,6 +25,26 @@ The notes are organized day-wise with:
 
 ## 3. Environment Setup (On Ubuntu via terminal)
 
+- Begin by creating a folder named `vsdrtlworkshop` and navigate into it to proceed with the subsequent steps.
+  ```
+  mkdir vsdrtlworkshop
+  cd vsdrtlworkshop
+  ```
+- Next,clone the following repository into this directory by running the command below.
+  ```
+  git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+  ```
+- This concludes the lab environment setup on the system.
+
+## 4. Day-wise Labs & Learnings 
+
+
+
+  
+  
+
+
+
 
 
  
