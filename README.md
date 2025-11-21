@@ -349,7 +349,7 @@ The notes are organized day-wise with:
 
   ## Lecture-18: SKY130RTL D2SK3 L4 Lab flop synthesis simulations part2
 
-    - Asynchronous reset
+ - Asynchronous reset
    
       ```
       yosys
@@ -401,46 +401,46 @@ The notes are organized day-wise with:
       <p align="center"><img width="1918" height="957" alt="image" src="https://github.com/user-attachments/assets/68599c2f-0ee4-4a00-8e4b-d245713d789f" /></p>
 
 
-      ## Lecture-19: SKY130RTL D2SK3 L5 Interesting optimisations part1
+   ## Lecture-19: SKY130RTL D2SK3 L5 Interesting optimisations part1
 
-      - Code Optimizations : Multiplying a number by 2 
+    - Code Optimizations : Multiplying a number by 2 
 
-        <p align="center"><img width="1266" height="717" alt="image" src="https://github.com/user-attachments/assets/85a5cf8c-15ea-4367-8bae-d8168db80403" /></p>
+      <p align="center"><img width="1266" height="717" alt="image" src="https://github.com/user-attachments/assets/85a5cf8c-15ea-4367-8bae-d8168db80403" /></p>
 
         output y[3:0] is simply {a,0} - multiplication by 2
         output y[4:0] is simply {a,0,0} -multipliation by 4
 
       - Multiplication by 2 :
 
-    ```
+      ```
       yosys
       yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > read_verilog mult_2.v
       yosys > synth -top mul2
-    ```
-    <p align="center"><img width="872" height="326" alt="image" src="https://github.com/user-attachments/assets/0c8dd276-a542-4604-87aa-c4c2314cbcc9" /></p>
+      ```
+     <p align="center"><img width="872" height="326" alt="image" src="https://github.com/user-attachments/assets/0c8dd276-a542-4604-87aa-c4c2314cbcc9" /></p>
 
-    ```
+      ```
       yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-    ```
+      ```
 
-    <p align="center"><img width="867" height="187" alt="image" src="https://github.com/user-attachments/assets/ca3edc3f-85cc-4a43-8871-31818bc6e551" /></p>
+     <p align="center"><img width="867" height="187" alt="image" src="https://github.com/user-attachments/assets/ca3edc3f-85cc-4a43-8871-31818bc6e551" /></p>
 
-    ```
-    show
-    ```
+      ```
+      show
+      ```
 
-  <p align="center"><img width="1917" height="965" alt="image" src="https://github.com/user-attachments/assets/737d464a-bb1e-452a-a162-c437e6bcaf3d" /></p>
+     <p align="center"><img width="1917" height="965" alt="image" src="https://github.com/user-attachments/assets/737d464a-bb1e-452a-a162-c437e6bcaf3d" /></p>
   
     - To view netlist :
       ```
       yosys > write_verilog -noattr mul2_net.v
       yosys > !gvim mul2_net.v
       ```
-  <p align="center"><img width="1918" height="921" alt="image" src="https://github.com/user-attachments/assets/56e68b1a-55e9-428b-8740-89314de3cb7d" /></p>
+     <p align="center"><img width="1918" height="921" alt="image" src="https://github.com/user-attachments/assets/56e68b1a-55e9-428b-8740-89314de3cb7d" /></p>
 
 
-    ## Lecture-20: SKY130RTL D2SK3 L6 Interesting optimisations part2
+   ## Lecture-20: SKY130RTL D2SK3 L6 Interesting optimisations part2
 
     - ax9 is nothing but ax[8+1] = ax8 +ax1 here a is a 3 bit number
 
@@ -454,17 +454,17 @@ The notes are organized day-wise with:
       ```
       <p align="center"><img width="785" height="318" alt="image" src="https://github.com/user-attachments/assets/e08d4562-d479-4c14-b216-b17da6339306" /></p>
 
-    ```
+      ```
       yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-    ```
+      ```
 
-    <p align="center"><img width="747" height="147" alt="image" src="https://github.com/user-attachments/assets/52493937-4ce4-41f1-983d-297d843ebe43" /></p>
+      <p align="center"><img width="747" height="147" alt="image" src="https://github.com/user-attachments/assets/52493937-4ce4-41f1-983d-297d843ebe43" /></p>
 
-    ```
-    show
-    ```
+      ```
+      show
+      ```
 
-    <p align="center"><img width="1918" height="998" alt="image" src="https://github.com/user-attachments/assets/039b4dda-b03f-431f-81b4-ef87c4abf5a5" /></p>
+      <p align="center"><img width="1918" height="998" alt="image" src="https://github.com/user-attachments/assets/039b4dda-b03f-431f-81b4-ef87c4abf5a5" /></p>
 
     - To view netlist :
       ```
@@ -473,6 +473,7 @@ The notes are organized day-wise with:
       ```
 
       <p align="center"><img width="1917" height="828" alt="image" src="https://github.com/user-attachments/assets/c1a72fc9-2180-4fba-9f4f-75d11b25c775" /></p>
+      
   </details>
 
   <details>
