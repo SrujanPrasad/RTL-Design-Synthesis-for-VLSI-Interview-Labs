@@ -49,7 +49,7 @@ The notes are organized day-wise with:
 - Iverilog-based simulation flow :
   <p align="center"> <img width="838" height="417" alt="image" src="https://github.com/user-attachments/assets/8027cbb8-3c6c-4ebb-a015-a056333254cc" /> </p>
 
-  ## Lecture-1: SKY130RTL D1SK2 L1 Lab1 introduction to lab
+## Lecture-1: SKY130RTL D1SK2 L1 Lab1 introduction to lab
   Installation and cloning of all the necessary repositories required for running the labs. A folder named vsdrtlworkshop is created, and the sky130RTLSynthesisAndDesign repository is cloned into it.
   <p align="center"> <img width="1918" height="917" alt="image" src="https://github.com/user-attachments/assets/25a2f94e-867d-45f0-b1ca-9f98a97c0932" /> </p>
 
