@@ -1,4 +1,19 @@
 # RTL-Design-Synthesis-for-VLSI-Interview-Labs
+
+## Table of Contents : 
+### 1. Overview
+### 2. Tools & Technology
+### 3. Environment Setup
+   - Lab setup on Codespace
+   - Lab Environment Setup on Ubuntu
+### 4. Day-wise Labs & Learnings
+   - Day 1 – Introduction to Verilog RTL design, simulation and synthesis
+   - Day 2 – Timing libs, Hierarchical vs Flat Synthesis, efficient flop coding styles
+   - Day 3 – Combinational & Sequential Optimizations
+   - Day 4 – Gate-Level Simulation & Mismatches
+   - Day 5 – Optimizations in synthesis,IF/CASE, Loops, Generate Constructs
+### 5.Acknowledgements
+
 <details>
   <summary> Setting up the environment on Codespace </summary>
   
