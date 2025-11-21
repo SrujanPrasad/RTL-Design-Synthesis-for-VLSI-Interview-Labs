@@ -1408,18 +1408,24 @@ endmodule
   </details>
 
   ## 5. ACKNOWLEDGEMENTS : 
+  
+My sincere gratitude to:
 
-  I would like to express my sincere gratitude to the following organizations and individuals whose efforts made this workshop and learning experience possible:
+- [**VLSI System Design (VSD)**](https://github.com/vsdip)  
+  For providing the workshop framework, hands-on labs, and continuous support.
 
-- [**VLSI System Design (VSD Corp. Pvt. Ltd.)**](https://github.com/vsdip)  
-  For providing the complete workshop framework, hands-on labs, and continuous support throughout the RTL Design & Synthesis course.
+- [**Kunal Ghosh**](https://github.com/kunalg123)  
+  For enabling open-source VLSI education and guiding this learning ecosystem.
 
-- [**Kunal Ghosh (Co-Founder, VSD)**](https://github.com/kunalg123)  
-  For his support and for enabling open-source VLSI education for students and professionals worldwide.
+- [**Shon Taware**](https://github.com/ShonTaware)  
+  For his clear, beginner-friendly explanations and smooth lab conduction.
 
-- [**Shon Taware(Course instructor)**](https://github.com/ShonTaware)
-  For his detailed and beginner-friendly explanations, and for conducting all the labs in a clear and seamless manner.
-   
+- **Google, SkyWater, Efabless, and Open-Source EDA Developers**  
+  For providing the **SKY130 Open-Source PDK** and essential tools like **Yosys**, **GTKWave**, and **Icarus Verilog**, which form the backbone of this open-source digital design flow.
+
+
+Thanks to the entire open-source silicon community for making this learning journey possible.
+
     
     
   
