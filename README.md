@@ -11,8 +11,26 @@
    - Day 2 – Timing libs, Hierarchical vs Flat Synthesis, efficient flop coding styles
    - Day 3 – Combinational & Sequential Optimizations
    - Day 4 – Gate-Level Simulation & Mismatches
-   - Day 5 – Optimizations in synthesis,IF/CASE, Loops, Generate Constructs
+   - Day 5 – Optimizations in synthesis, IF/CASE, Loops,and  Generate Constructs
 ### 5.Acknowledgements
+
+## Overview : 
+This repository documents hands-on labs and learnings from the **“RTL Design & Synthesis using SKY130”** workshop, focused on:
+
+- RTL coding in Verilog
+- Functional simulation using **iverilog** + **GTKWave**
+- Logic synthesis using **Yosys** with **SKY130** standard cell library
+- Gate-level simulation (GLS) and debugging synthesis–simulation mismatches
+- Coding styles and optimizations for synthesis-friendly RTL
+
+The notes are organized day-wise with:
+- Commands used  
+- Netlists/diagrams generated  
+- Key learnings & interview-ready points
+
+
+
+
 
 <details>
   <summary> Setting up the environment on Codespace </summary>
