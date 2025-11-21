@@ -301,34 +301,30 @@ The notes are organized day-wise with:
 
   -  always block gets executed whenever there is a change in the clock or reset.
   -  **Asynchronous reset** is the reset that is independent of the clock signal.
-    ```
-    module dff_asyn_res(input clk,d,output q);
-      always @(posedge clk or posedge rst)
-      begin
-        if(rst)
-          q<=1'b0;
-      //if(set)
-          //q<=1'b1;
-        else
-          q<=d;
-      end
-    endmodule
-    ```
-   - **Synchronous reset** is the reset that is dependent on the clock signal.
-    ```
-    module dff_syn_res(input clk,d,output q);
-      always @(posedge clk)
-      begin
-        if(rst)
-          q<=1'b0;
-      //if(set)
-          //q<=1'b1;
-        else
-          q<=d;
-      end
-    endmodule
-    ```
-
+  ```verilog
+module dff_asyn_res(input clk, input rst, input d, output reg q);
+  always @(posedge clk or posedge rst) begin
+    if (rst)
+      q <= 1'b0;
+    else
+      q <= d;
+  end
+endmodule
+```
+ - **Synchronous reset** is the reset that is dependent on the clock signal.
+```verilog
+module dff_asyn_res(input clk, input rst, input d, output reg q);
+  always @(posedge clk or posedge rst) begin
+    if (rst)
+      q <= 1'b0;
+    // else if (set)
+    //   q <= 1'b1;
+    else
+      q <= d;
+  end
+endmodule
+```
+    
   ## Lecture-17: SKY130RTL D2SK3 L3 Lab flop synthesis simulations part1
 
   To simulate all the designs :
