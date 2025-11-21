@@ -496,9 +496,9 @@ endmodule
 
   ## Lecture-24: SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1
 
-  - Working on opt_check.v (and gate after optimisation)
+  - Working on `opt_check.v` (and gate after optimisation)
 
-      ```
+      ```bash
       yosys
       yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > read_verilog opt_check.v
@@ -507,32 +507,32 @@ endmodule
 
       <p align="center"><img width="617" height="375" alt="image" src="https://github.com/user-attachments/assets/a5e8392f-f77d-4f1c-9ceb-a229b53d706c" /></p>
 
-      To optimise it :
-      ```
+      To optimize it :
+      ```bash
       yosys > opt_clean -purge
       ```
 
        <p align="center"><img width="1180" height="338" alt="image" src="https://github.com/user-attachments/assets/b2bd053c-87ab-4255-bd87-d7e51e8c8743" /></p>
 
-      ```
+      ```bash
       yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       ```
 
-      ```
+      ```bash
       show
       ```
       <p align="center"><img width="1917" height="937" alt="image" src="https://github.com/user-attachments/assets/6c03a92b-892e-49ef-8146-f9a8760c6d2a" /></p>
 
-     - Working on opt_check2.v (or gate after optimisation)
+     - Working on `opt_check2.v` (or gate after optimisation)
 
        <p align="center"><img width="1918" height="885" alt="image" src="https://github.com/user-attachments/assets/ea1f5821-c4c3-47b6-bd7c-c115f6bc0d63" /></p>
 
 
    ## Lecture-25: SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2
 
-   - Working on opt_check3.v (3 input AND gate after optimisation)
+   - Working on `opt_check3.v` (3 input AND gate after optimisation)
 
-      ```
+      ```bash
       yosys
       yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > read_verilog opt_check3.v
@@ -540,31 +540,31 @@ endmodule
       ```
      <p align="center"><img width="645" height="363" alt="image" src="https://github.com/user-attachments/assets/c200e65b-127f-43d8-9757-a5a065935c9e" /></p>
     
-     - To optimise it :
+     - To optimize it :
      
-      ```
+      ```bash
       yosys > opt_clean -purge
       ```
 
-      ```
+      ```bash
       yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       ```
 
-      ```
+      ```bash
       show
       ```
 
      <p align="center"><img width="1918" height="927" alt="image" src="https://github.com/user-attachments/assets/e235a70a-7817-44c3-9818-c6855fd0e3de" /></p>
 
-  - Working on opt_check4.v (XNOR of A and C)
+  - Working on `opt_check4.v` (XNOR of A and C)
 
      <p align="center"> <img width="625" height="376" alt="image" src="https://github.com/user-attachments/assets/3c2362cd-0e8d-48f7-a600-13875262f9f4" /></p>
 
      <p align="center"><img width="1918" height="953" alt="image" src="https://github.com/user-attachments/assets/8bb10e48-a59b-4d88-85cd-d8af6e91ee7c" /></p>
 
-  - Working on multiple_modules_opt.v (a21o gate)
+  - Working on `multiple_modules_opt.v` (a21o gate)
  
-      ```
+      ```bash
       yosys
       yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > read_verilog multiple_modules_opt.v
@@ -573,20 +573,20 @@ endmodule
 
       <p align="center"><img width="807" height="793" alt="image" src="https://github.com/user-attachments/assets/9c9d2aec-3ea4-4b56-90e1-3ffeb6bd954f" /></p>
       
-      ```
+      ```bash
       yosys > abc -liberty ..lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > show multiple_module_opt
       ```
       
       <p align="center"><img width="1917" height="942" alt="image" src="https://github.com/user-attachments/assets/099dd337-1a01-4288-96fc-a3eb10bdeae7" /></p>
 
-      ```
+      ```bash
       yosys > write_verilog -noattr multiple_module_opt_hier.v
       yosys > !gvim multiple_module_opt_hier.v
       ```
       <p align="center"><img width="1912" height="885" alt="image" src="https://github.com/user-attachments/assets/e14dc756-85d3-440c-9c96-c6655e072b8e" /></p>
 
-      ```
+      ```bash
       yosys > flatten
       yosys > write_verilog -noattr multiple_module_opt_flat.v
       yosys > !gvim multiplr_module_opt_flat.v
@@ -596,7 +596,7 @@ endmodule
 
       <p align="center"><img width="1917" height="926" alt="image" src="https://github.com/user-attachments/assets/4aa7188b-4bb1-4220-8ea0-0c3689cdfcfb" /></p>
 
-      ```
+      ```bash
       yosys > opt_clean -purge
       yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > show
@@ -604,7 +604,7 @@ endmodule
 
       <p align="center"><img width="1918" height="922" alt="image" src="https://github.com/user-attachments/assets/aece825c-26ab-41fb-88db-b28f8333eb21" /></p>
 
-    - Working on multiple_modules_opt2.v ( gate)
+    - Working on `multiple_modules_opt2.v` ( gate)
 
         <p align="center"><img width="762" height="773" alt="image" src="https://github.com/user-attachments/assets/db5bbee7-1487-4bfb-995a-8bb6c778f064" /></p>
 
@@ -618,16 +618,16 @@ endmodule
 
    ## Lecture-26: SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1
 
-   - Working on dff_const1.v :
+   - Working on `dff_const1.v` :
 
-     ```
+     ```bash
      iverilog tb_dfF_const1.v dff_const1.v
      ./a.out
      gtkwave tb_dff_const1.vcd
      ```
         <p align="center"><img width="1915" height="933" alt="image" src="https://github.com/user-attachments/assets/f5cae4d4-1270-4116-8479-23f0dbba789b" /></p>
  
-      ```
+      ```bash
       yosys
       yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > read_verilog dff_const1.v
@@ -635,13 +635,13 @@ endmodule
       ```
         <p align="center"><img width="598" height="248" alt="image" src="https://github.com/user-attachments/assets/1bd9a9e6-0ead-4e22-ae90-2da85d13733b" /></p>
  
-      ```
+      ```bash
       yosys > dfflibmap -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
       ```
  
         <p align="center"><img width="1027" height="612" alt="image" src="https://github.com/user-attachments/assets/6050bcd7-42dc-4d9e-8393-b60478d0c873" /></p>
  
-      ```
+      ```bash
       show
       ```
         <p align="center"><img width="1916" height="946" alt="image" src="https://github.com/user-attachments/assets/8d4359de-7777-467f-b05c-75a8188f0df0" /></p>
@@ -649,16 +649,16 @@ endmodule
 
    ## Lecture-27: SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2
 
-   - Working on dff_const2.v :
+   - Working on `dff_const2.v` :
 
-     ```
+     ```bash
      iverilog tb_dfF_const2.v dff_const2.v
      ./a.out
      gtkwave tb_dff_const2.vcd
      ```
         <p align="center"><img width="1916" height="917" alt="image" src="https://github.com/user-attachments/assets/74775511-b0d3-406c-a7af-d235bfc1d06d" /></p>
 
-      ```
+      ```bash
       yosys
       yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > read_verilog dff_const2.v
@@ -668,7 +668,7 @@ endmodule
  
       Now, since no flop is required
  
-      ```
+      ```bash
       yosys >abc -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
       yosys > show
       ```
@@ -677,9 +677,9 @@ endmodule
 
   ## Lecture-28: SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3
 
-   - Working on dff_const3.v
+   - Working on `dff_const3.v`
 
-     ```
+     ```bash
      iverilog tb_dfF_const3.v dff_const3.v
      ./a.out
      gtkwave tb_dff_const3.vcd
@@ -687,7 +687,7 @@ endmodule
 
       <p align="center"><img width="1917" height="918" alt="image" src="https://github.com/user-attachments/assets/4d355a59-b531-4e1a-b62c-392e9bd90801" /></p>
 
-     ```
+     ```bash
       yosys
       yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > read_verilog dff_const3.v
@@ -695,7 +695,7 @@ endmodule
      ```
       <p align="center"><img width="557" height="286" alt="image" src="https://github.com/user-attachments/assets/55904c48-aec4-477e-ac3f-5f57e8c2efe9" /></p>
 
-     ```
+     ```bash
       yosys > dfflibmap -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
       yosys > abc -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
       yosys > show
@@ -703,7 +703,7 @@ endmodule
 
       <p align="center"><img width="1913" height="927" alt="image" src="https://github.com/user-attachments/assets/4a6cf95f-8c34-4f46-9ad5-277e00b6c037" /></p>
 
-  - Working on dff_const4.v
+  - Working on `dff_const4.v`
 
      ```
      iverilog tb_dfF_const4.v dff_const4.v
@@ -728,9 +728,9 @@ endmodule
       ```
      <p align="center"><img width="1918" height="928" alt="image" src="https://github.com/user-attachments/assets/d9647f98-b097-4a17-bb35-ac0cd658e45a" /></p>
 
-  - Working on dff_const3.v
+  - Working on `dff_const5.v`
 
-     ```
+     ```bash
         iverilog tb_dfF_const5.v dff_const5.v
         ./a.out
         gtkwave tb_dff_const5.vcd
@@ -738,7 +738,7 @@ endmodule
 
     <p align="center"><img width="1916" height="922" alt="image" src="https://github.com/user-attachments/assets/b2945909-c835-43bf-aded-b063c150f3dc" /></p>
 
-    ```
+    ```bash
       yosys
       yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > read_verilog dff_const3.v
@@ -746,7 +746,7 @@ endmodule
     ```
     <p align="center"><img width="558" height="272" alt="image" src="https://github.com/user-attachments/assets/bc417747-3093-4351-ab16-e1a588e717b1" /></p>
 
-    ```
+    ```bash
       yosys > dfflibmap -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
       yosys > abc -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
       yosys > show
@@ -755,9 +755,9 @@ endmodule
 
   ## Lecture-29: SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1
 
-    - Working on 3-bit up counter (counter_opt.v with q=count[0])
+  - Working on 3-bit up counter (`counter_opt.v` with q=count[0])
 
-      ```
+      ```bash
       yosys
       yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > read_verilog counter_opt.v
@@ -765,22 +765,22 @@ endmodule
       ```
       <p align="center"><img width="417" height="286" alt="image" src="https://github.com/user-attachments/assets/f2bbd07b-3400-4cc0-87c6-461a9159a565" /></p>
 
-      ```
+      ```bash
       yosys > dfflibmap -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
       yosys > abc -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
       yosys > show
       ```
       <p align="center"><img width="1918" height="928" alt="image" src="https://github.com/user-attachments/assets/ab721e86-e63d-42a7-93b6-75648d883aea" /></p>
 
-      This netlist is nothing but same as circuit shown in below image :
+      This netlist is nothing but same as the circuit shown in image below:
       <p align="center"><img width="1539" height="1600" alt="image" src="https://github.com/user-attachments/assets/0e8cba0a-e7a6-4f90-bd11-deefed47449d" /></p>
 
 
-      ## Lecture-30: SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2
+    ## Lecture-30: SKY130RTL D3SK4 L2 Seq optimisation unused outputs part2
 
-  - Working on 3-bit up counter (counter_opt2.v)
+  - Working on 3-bit up counter (`counter_opt2.v`)
      
-     ```
+     ```bash
       yosys
       yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > read_verilog counter_opt2.v
@@ -788,7 +788,7 @@ endmodule
      ```
    <p align="center"><img width="537" height="350" alt="image" src="https://github.com/user-attachments/assets/5ce93b07-1bd6-433c-a3f3-bb2ecf678760" /></p>
 
-   ```
+   ```bash
       yosys > dfflibmap -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
       yosys > abc -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
       yosys > show
@@ -804,20 +804,20 @@ endmodule
 
   ## Lecture-31: SKY130RTL D4SK1 L1 GLSConceptsAndFlowUsingIverilog
 
-    - **"GLS"** stands for Gate Level Simulation.
-    - GLS is nothing but running the netlist with testbench as netlist is same as the RTL code.
+  - **"GLS"** stands for Gate Level Simulation.
+  - GLS is nothing but running the netlist with a testbench, as the  netlist is the same as the RTL code.
 
-  <p align="center"><img width="1207" height="635" alt="image" src="https://github.com/user-attachments/assets/c2163aff-bc27-467f-85d4-30edd1d82e16" /></p>
+    <p align="center"><img width="1207" height="635" alt="image" src="https://github.com/user-attachments/assets/c2163aff-bc27-467f-85d4-30edd1d82e16" /></p>
 
-    - Gate level verilog models contain the information about the behavior of the standard cells.
-    - If Gate level verilog models are timing aware then they can be used for timing validation as well.
+   - Gate-level Verilog models contain the information about the behaviour of the standard cells.
+   - If Gate-level Verilog models are timing aware, then they can be used for timing validation as well.
  
   ## Lecture-32: SKY130RTL D4SK1 L2 SynthesisSimulationMismatch
 
   - Synthesis and Simulation mismatches can occur due to :
     - Missing sensitivity list.
-    - Blocking vs non blocking assignments.
-    - Non standard verilog coding.
+    - Blocking vs non-blocking assignments.
+    - Non-standard Verilog coding.
 
   - Missing Sensitivity list :
 
@@ -825,7 +825,7 @@ endmodule
 
   ## Lecture-33: SKY130RTL D4SK1 L3 BlockingAndNonBlockingStatementsInVerilog
 
-  - Blocking vs Non Blocking Assignments:
+  - Blocking vs Non-Blocking Assignments:
     - **Blocking assignment (=)**: evaluates sequentially line by line.
     - **Non Blocking assignment (<=)**: evaluates parallely.
 
@@ -835,7 +835,7 @@ endmodule
   ## Lecture-34: SKY130RTL D4SK1 L4 CaveatsWithBlockingStatements
   
   - Verilog code for shift register using blocking statements :
-    ```
+    ```verilog
     module shift(input clk,d,rst,output q0,q);
     always @(posedge clk or posedge rst)
       begin
@@ -853,7 +853,7 @@ endmodule
     endmodule
     ```
   - Verilog code for shift register using non-blocking statements :
-    ```
+    ```verilog
     module shift(input clk,d,rst,output reg q0,q);
     always @(posedge clk or posedge rst)
       begin
@@ -871,7 +871,7 @@ endmodule
     endmodule
     ```
   - Suppose if the following code is written assuming it will synthesize a shift register:
-    ```
+    ```verilog
     module shift(input clk,d,rst,output q0,q);
     always @(posedge clk or posedge rst)
       begin
@@ -889,27 +889,27 @@ endmodule
     endmodule
     ```
 
-  - q0 already has the value of d , hence q will simply follow d and only one flip flop will be synthesized as we have used the blocking assignment.So this is the blocking vs non blocking mismatch.
-  - Hence , we must use non blocking statements for modelling sequential circuits.
+  - q0 already has the value of d, hence q will simply follow d, and only one flip-flop will be synthesized, as we have used the blocking assignment .So this is the blocking vs non-blocking mismatch.
+  - Hence, we must use non-blocking statements for modelling sequential circuits.
 
   ## Lecture-35: SKY130RTL D4SK2 L1 Lab GLS Synth Sim Mismatch part1
 
-  - Wokring on ternary_operator_mux.v
-     - 2x1 MUX using trernary operator :
-       ```
+  - Working on `ternary_operator_mux.v`
+     - 2x1 MUX using ternary operator :
+       ```verilog
        module mux21(input i0,i1,s,output out);
        assign out = s?i1:i0;
        endmodule
        ```
 
-       ```
+       ```bash
        iverilog tb_ternary_operator_mux.v ternary_operator_mux.v
        ./a.out
        gtkwave tb_ternary_operator_mux.vcd
        ```
        <p align="center"><img width="1918" height="930" alt="image" src="https://github.com/user-attachments/assets/d6e76f3f-05e0-45ae-8e32-53b88364792f" /></p>
 
-       ```
+       ```bash
        yosys
        yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
        yosys > read_verilog ternary_operator_mux.v
@@ -918,13 +918,13 @@ endmodule
 
        <p align="center"><img width="553" height="277" alt="image" src="https://github.com/user-attachments/assets/93469649-4006-46f3-9ee1-769b9bb57433" /></p>
 
-       ```
+       ```bash
        yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
        yosys > show
        ```
        <p align="center"><img width="1917" height="941" alt="image" src="https://github.com/user-attachments/assets/d35dc1c6-1056-4337-85b0-cf4588b2ad1a" /></p>
 
-       ```
+       ```bash
        yosys > write_verilog -noattr ternary_operator_mux_net.v
        yosys > !gvim ternary_operator_mux_net.v
        ```
@@ -933,7 +933,7 @@ endmodule
 
        Now to do GLS :
 
-       ```
+       ```bash
        iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v ternary_operator_mux_net.v tb_ternary_operator_mux.v
        ./a.out
        gtkwave tb_ternary_operator_mux.vcd
@@ -945,16 +945,16 @@ endmodule
 
     ## Lecture-36: SKY130RTL D4SK2 L2 Lab GLS Synth Sim Mismatch part2
 
-    - Working on bad_mux.v
+    - Working on `bad_mux.v`
 
-       ```
+       ```bash
        iverilog tb_bad_mux.v bad_mux.v
        ./a.out
        gtkwave tb_bad_mux.vcd
        ```
        <p align="center"><img width="1918" height="918" alt="image" src="https://github.com/user-attachments/assets/ceea8d43-309c-4fd9-aeaa-7fda9bd0dbdf" /></p>
 
-       ```
+       ```bash
        yosys
        yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
        yosys > read_verilog bad_mux.v
@@ -963,12 +963,12 @@ endmodule
 
        <p align="center"><img width="530" height="278" alt="image" src="https://github.com/user-attachments/assets/f5839aeb-6c04-42c4-8f9c-6c538b8c551f" /></p>
 
-       ```
+       ```bash
        yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
        yosys > write_verilog -noattr bad_mux_net.v
        ```
 
-       ```
+       ```bash
        iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_mux_net.v tb_bad_mux.v
        ./a.out
        gtkwave tb_bad_mux.vcd
@@ -978,8 +978,8 @@ endmodule
 
     ## Lecture-37: SKY130RTL D4SK3 L1 Lab Synth sim mismatch blocking statement part1
 
-    - Working with blocking_caveat.v :
-      ```
+    - Working with `blocking_caveat.v` :
+      ```bash
       iverilog blocking_caveat.v tb_blocking_caveat.v
       ./a.out
       gtkwave tb_blocking_caveat.vcd
@@ -989,7 +989,7 @@ endmodule
 
     ## Lecture-38: SKY130RTL D4SK3 L2 Lab Synth sim mismatch blocking statement part2
 
-      ```
+      ```bash
       yosys
       yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > read_verilog blocking_caveat.v
@@ -998,7 +998,7 @@ endmodule
 
       <p align="center"><img width="520" height="296" alt="image" src="https://github.com/user-attachments/assets/20596c6d-0372-43c6-9312-548c29687d07" /></p>
 
-      ```
+      ```bash
       yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > write_verilog -noattr blocking_caveat.v
       yosys > show
@@ -1008,7 +1008,7 @@ endmodule
 
        Now to do GLS :
 
-       ```
+       ```bash
        iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v blocking_caveat_net.v tb_blocking_caveat.v
        ./a.out
        gtkwave tb_blocking_caveat.vcd
@@ -1021,27 +1021,27 @@ endmodule
   <details>
     <summary>DAY-5</summary>
 
-    ## Lecture-39: SKY130RTL D5SK1 L1 IF CASE Constructs part1
+## Lecture-39: SKY130RTL D5SK1 L1 IF CASE Constructs part1
 
-    - **If** statement :
+  - **If** statement :
       if <cond1>
         begin
           ----
           ----
         end
-    - Problems  occurred using the if statement :
+  - Problems  occurred using the if statement :
       - **Inferred latches** - If there is no else statement, then a latch will be synthesized.
       <p align="center"><img width="897" height="497" alt="image" src="https://github.com/user-attachments/assets/81c7297e-a479-4179-909f-477d39d1c0e2" /></p>
 
-      ## Lecture-40: SKY130RTL D5SK1 L2 IF CASE Constructs part2
+   ## Lecture-40: SKY130RTL D5SK1 L2 IF CASE Constructs part2
 
-      <p align="center"><img width="891" height="502" alt="image" src="https://github.com/user-attachments/assets/a0c48f99-9d3e-4598-95f2-783ffa3dd1cb" /></p>
+  <p align="center"><img width="891" height="502" alt="image" src="https://github.com/user-attachments/assets/a0c48f99-9d3e-4598-95f2-783ffa3dd1cb" /></p>
 
-      - Incomplete "**case**" statements also lead to inferred latches (if no default statement present)
+  - Incomplete "**case**" statements also lead to inferred latches (if no default statement present)
 
       <p align="center"><img width="891" height="501" alt="image" src="https://github.com/user-attachments/assets/d3e3afa0-8da5-44bb-96b7-bd303b1ec1f3" /></p>
 
-      ## Lecture-41: SKY130RTL D5SK1 L3 IF CASE Constructs part3
+    ## Lecture-41: SKY130RTL D5SK1 L3 IF CASE Constructs part3
 
       - Partial Assignments in case :
         - We must assign all the outputs in the case conditions.
@@ -1049,16 +1049,16 @@ endmodule
 
       ## Lecture-42: SKY130RTL D5SK2 L1 Lab Incomplete IF part1
 
-      - Working on incomp_if.v : (Nothing but a D latch)
+      - Working on `incomp_if.v` : (Nothing but a D latch)
 
-        ```
+        ```bash
         iverilog tb_incomp_if.v incomp_if.v
         ./a.out
         gtkwave tb_incomp_if.vcd
         ```
         <p align="center"><img width="1917" height="912" alt="image" src="https://github.com/user-attachments/assets/1a15841e-701c-406a-91f2-15f6ea7ca38e" /></p>
 
-        ```
+        ```bash
         yosys
         yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
         yosys > read_verilog incomp_if.v
@@ -1066,24 +1066,24 @@ endmodule
         ```
         <p align="center"><img width="461" height="251" alt="image" src="https://github.com/user-attachments/assets/5237350b-70f3-4482-9aa4-0bceb643df36" /></p>
 
-        ```
+        ```bash
         yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
         yosys > show
         ```
         <p align="center"><img width="1918" height="947" alt="image" src="https://github.com/user-attachments/assets/f58db307-5e35-4581-8e78-986033f19d1a" /></p>
 
-        ## Lecture-43: SKY130RTL D5SK2 L2 Lab Incomplete IF part2
+    ## Lecture-43: SKY130RTL D5SK2 L2 Lab Incomplete IF part2
 
-      - Working on incomp_if2.v : (D latch with enable controlled by a combinational logic)
+      - Working on `incomp_if2.v` : (D latch with enable controlled by a combinational logic)
 
-        ```
+        ```bash
         iverilog tb_incomp_if.v incomp_if.v
         ./a.out
         gtkwave tb_incomp_if.vcd
         ```
         <p align="center"><img width="1918" height="922" alt="image" src="https://github.com/user-attachments/assets/4b377f79-06e1-4bdb-8d21-3812abd8dcc4" /></p>
 
-        ```
+        ```bash
         yosys
         yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
         yosys > read_verilog incomp_if.v
@@ -1091,23 +1091,23 @@ endmodule
         ```
         <p align="center"><img width="505" height="276" alt="image" src="https://github.com/user-attachments/assets/54d2c8e2-49be-43cf-b1eb-eb6c06f67272" /></p>
 
-        ```
+        ```bash
         yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
         yosys > show
         ```
         <p align="center"><img width="1918" height="912" alt="image" src="https://github.com/user-attachments/assets/a482e0b3-4522-4019-b6f7-6240a16c824f" /></p>
 
-        ## Lecture-44: SKY130RTL D5SK3 L1 Lab incomplete overlapping Case part1
+    ## Lecture-44: SKY130RTL D5SK3 L1 Lab incomplete overlapping Case part1
 
-      - Working on incomp_case.v :
-        ```
+      - Working on `incomp_case.v` :
+        ```bash
         iverilog tb_incomp_case.v incomp_case.v
         ./a.out
         gtkwave tb_incomp_case.vcd
         ```
         <p align="center"><img width="1918" height="918" alt="image" src="https://github.com/user-attachments/assets/49eaa34c-bcad-471b-84a9-619038b91629" /></p>
 
-        ```
+        ```bash
         yosys
         yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
         yosys > read_verilog incomp_case.v
@@ -1115,47 +1115,47 @@ endmodule
         ```
         <p align="center"><img width="482" height="307" alt="image" src="https://github.com/user-attachments/assets/822b3b8a-c027-4006-94d5-d38e9a61f589" /></p>
 
-        ```
+        ```bash
         yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
         yosys > show
         ```
         <p align="center"><img width="1918" height="908" alt="image" src="https://github.com/user-attachments/assets/33f7eddb-3bdc-4b3b-9145-24e96ca481e7" /></p>
 
-        ## Lecture-45: SKY130RTL D5SK3 L2 Lab incomplete overlapping Case part2
+    ## Lecture-45: SKY130RTL D5SK3 L2 Lab incomplete overlapping Case part2
 
-        ```
-        iverilog tb_incomp_case.v incomp_case.v
-        ./a.out
-        gtkwave tb_incomp_case.vcd
-        ```
-        <p align="center"><img width="1918" height="922" alt="image" src="https://github.com/user-attachments/assets/6f8ad8bb-5962-4179-bf13-b40252e60140" /></p>
+    ```bash
+    iverilog tb_incomp_case.v incomp_case.v
+    ./a.out
+    gtkwave tb_incomp_case.vcd
+    ```
+     <p align="center"><img width="1918" height="922" alt="image" src="https://github.com/user-attachments/assets/6f8ad8bb-5962-4179-bf13-b40252e60140" /></p>
 
-        ```
-        yosys
-        yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-        yosys > read_verilog comp_case.v
-        yosys > synth -top comp_case
-        ```
-        <p align="center"><img width="582" height="320" alt="image" src="https://github.com/user-attachments/assets/3ababe5e-3dd3-43fb-8a94-2c4c74d18a6f" /></p>
+    ```bash
+    yosys
+    yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+    yosys > read_verilog comp_case.v
+    yosys > synth -top comp_case
+    ```
+    <p align="center"><img width="582" height="320" alt="image" src="https://github.com/user-attachments/assets/3ababe5e-3dd3-43fb-8a94-2c4c74d18a6f" /></p>
 
-        ```
-        yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
-        yosys > show
-        ```
-        <p align="center"><img width="1917" height="922" alt="image" src="https://github.com/user-attachments/assets/e0f69c6f-3591-4de1-97af-d3a569f24fd0" /></p>
+    ```bash
+    yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+    yosys > show
+    ```
+    <p align="center"><img width="1917" height="922" alt="image" src="https://github.com/user-attachments/assets/e0f69c6f-3591-4de1-97af-d3a569f24fd0" /></p>
 
-        ## Lecture-46: SKY130RTL D5SK3 L3 Lab incomplete overlapping Case part3
+    ## Lecture-46: SKY130RTL D5SK3 L3 Lab incomplete overlapping Case part3
 
-      - Working on partial_casE_assign.v : 
+      - Working on `partial_case_assign.v` : 
 
-        ```
+        ```bash
         iverilog tb_partial_case_assign.v partial_case_assign.v
         ./a.out
         gtkwave tb_partial_case_assign.v.vcd
         ```
         <p align="center"><img width="1918" height="926" alt="image" src="https://github.com/user-attachments/assets/ef9d9130-b3fa-4712-95c0-60e7568624ec" /></p>
 
-        ```
+        ```bash
         yosys
         yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
         yosys > read_verilog partial_case_assign.v
@@ -1163,26 +1163,26 @@ endmodule
         ```
         <p align="center"><img width="548" height="337" alt="image" src="https://github.com/user-attachments/assets/d6d16df3-5626-435b-9ad4-fe389bac0388" /></p>
 
-        ```
+        ```bash
         yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
         yosys > show
         ```
         <p align="center"><img width="1918" height="921" alt="image" src="https://github.com/user-attachments/assets/9229811e-7320-40b9-b025-b77da4598878" /></p>
 
-      - Working on bad_case.v :
+      - Working on `bad_case.v` :
 
-        ```
+        ```bash
         iverilog tb_bad_case.v bad_case.v
         ./a.out
         gtkwave tb_bad_case.vcd
         ```
         <p align="center"><img width="1918" height="920" alt="image" src="https://github.com/user-attachments/assets/c7dfeaa8-d009-41dc-b3cb-c9f6098ea078" /></p>
      
-        ## Lecture-47: SKY130RTL D5SK3 L4 Lab incomplete overlapping Case part4
+    ## Lecture-47: SKY130RTL D5SK3 L4 Lab incomplete overlapping Case part4
 
-       - Working on bad_case.v(contd..) :
+      - Working on `bad_case.v`(contd..) :
 
-        ```
+        ```bash
         yosys
         yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
         yosys > read_verilog bad_case.v
@@ -1190,7 +1190,7 @@ endmodule
         ```
         <p align="center"><img width="480" height="338" alt="image" src="https://github.com/user-attachments/assets/c1bce763-9fae-4bf5-8a8a-e44f61cc4905" /></p>
 
-        ```
+        ```bash
         yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
         yosys > write_verilog -noattr bad_case_net.v
         yosys > show
@@ -1199,19 +1199,19 @@ endmodule
 
         To perform GLS :
 
-       ```
+       ```bash
        iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v bad_case_net.v tb_bad_case.v
        ./a.out
        gtkwave tb_bad_case.vcd
        ```
        <p align="center"><img width="1918" height="920" alt="image" src="https://github.com/user-attachments/assets/3bf43188-f8dc-4c63-b9b5-892119272cfd" /></p>
 
-       ## Lecture-48: SKY130RTL D5SK4 L1 For Loop and For Generate part1
+    ## Lecture-48: SKY130RTL D5SK4 L1 For Loop and For Generate part1
 
       - A for loop is used inside the always block (a simple way of generating large hardware), whereas the generate for loop is not used inside the always block.
       - Generate for loop to instantiate hardware. To instantiate an AND gate 100 times, we use the generate for loop.
       - Example of for loop (32:1 mux) :
-        ```
+        ```verilog
         module mux32_1(input [31:0]in, input sel, output y);
         integer i;
         always @(*)
@@ -1225,10 +1225,10 @@ endmodule
         endmodule
         ```
 
-        ## Lecture-49: SKY130RTL D5SK4 L2 For Loop and For Generate part2
+    ## Lecture-49: SKY130RTL D5SK4 L2 For Loop and For Generate part2
 
-        - 1:8 Demux :
-         ```
+    - 1:8 Demux :
+      ```verilog
         module demux18(input in, input sel, output [7:0]y);
         integer i;
          y=8'b0;
@@ -1243,9 +1243,9 @@ endmodule
         endmodule
         ```
 
-       - Generate for loop: This is mainly for replicating the hardware.
+      - Generate for loop: This is mainly for replicating the hardware.
 
-         ```
+         ```verilog
          genvar i;
          generate
              for(i=0;i<8;i=i+1)
@@ -1256,10 +1256,10 @@ endmodule
          ```
          <p align="center"><img width="862" height="287" alt="image" src="https://github.com/user-attachments/assets/22f216fd-7b97-4d14-a475-b1d9eef55705" /></p>
 
-        ## Lecture-51: SKY130RTL D5SK5 L1 Lab For and For Generate part1
+      ## Lecture-51: SKY130RTL D5SK5 L1 Lab For and For Generate part1
 
-      - Working on mux_generate.v:
-        ```
+      - Working on `mux_generate.v`:
+        ```bash
         iverilog mux_generate.v tb_mux_generate.v
         ./a.out
         gtkwave tb_mux_generate.vcd
@@ -1267,7 +1267,7 @@ endmodule
 
         <p align="center"><img width="1918" height="917" alt="image" src="https://github.com/user-attachments/assets/589030e5-cf4b-44a3-a5c2-37e143d0d76f" /></p>
 
-        ```
+        ```bash
         yosys
         yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
         yosys > read_verilog mux_generate.v
@@ -1276,7 +1276,7 @@ endmodule
 
         <p align="center"><img width="491" height="297" alt="image" src="https://github.com/user-attachments/assets/fd878a64-34a0-4bc4-99d9-005bcbb8c235" /></p>
 
-        ```
+        ```bash
         yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
         yosys > write_verilog -noattr mux_generate_net.v
         yosys > show
@@ -1286,17 +1286,17 @@ endmodule
 
       To perform GLS :
 
-       ```
+       ```bash
        iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v mux_generate_net.v tb_mux_generate.v
        ./a.out
        gtkwave tb_mux_generate.vcd
        ```
        <p align="center"><img width="1917" height="917" alt="image" src="https://github.com/user-attachments/assets/75ee1e96-84b6-4a0a-ade4-e13ad3536de4" /></p>
 
-       ## Lecture-52: SKY130RTL D5SK5 L2 Lab For and For Generate part2
+      ## Lecture-52: SKY130RTL D5SK5 L2 Lab For and For Generate part2
 
-      - Working on demux_case.v :
-        ```
+      - Working on `demux_case.v` :
+        ```bash
         iverilog demux_case.v tb_demux_case.v
         ./a.out
         gtkwave tb_demux_case.vcd
@@ -1304,7 +1304,7 @@ endmodule
 
         <p align="center"><img width="1918" height="927" alt="image" src="https://github.com/user-attachments/assets/18bf0028-920f-4f08-b126-067a2a1269a6" /></p>
 
-        ```
+        ```bash
         yosys
         yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
         yosys > read_verilog  demux_case.v
@@ -1313,7 +1313,7 @@ endmodule
 
         <p align="center"><img width="507" height="365" alt="image" src="https://github.com/user-attachments/assets/648e2894-b148-4911-94f3-1a9e28ca30d1" /></p>
 
-        ```
+        ```bash
         yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
         yosys > write_verilog -noattr demux_case_net.v
         yosys > show
@@ -1323,15 +1323,15 @@ endmodule
 
       To perform GLS :
 
-       ```
+       ```bash
        iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v demux_case_net.v tb_demux_case.v
        ./a.out
        gtkwave tb_demux_case.v
        ```
        <p align="center"><img width="1918" height="917" alt="image" src="https://github.com/user-attachments/assets/0de58663-c4aa-4974-bfb3-e9dce1e51ddd" /></p>
 
-     - Working on demux_generate.v :
-        ```
+     - Working on `demux_generate.v` :
+        ```bash
         iverilog demux_case.v tb_demux_generate.v
         ./a.out
         gtkwave tb_demux_case.vcd
@@ -1339,7 +1339,7 @@ endmodule
 
         <p align="center"><img width="1918" height="916" alt="image" src="https://github.com/user-attachments/assets/88935ebe-40ae-49d2-beb0-fb393999755d" /></p>
 
-        ```
+        ```bash
         yosys
         yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
         yosys > read_verilog  demux_generate.v
@@ -1348,7 +1348,7 @@ endmodule
 
         <p align="center"><img width="533" height="311" alt="image" src="https://github.com/user-attachments/assets/2376aeba-2f67-46a2-bde4-b2e751bacc28" /></p>
 
-        ```
+        ```bash
         yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
         yosys > write_verilog -noattr demux_generate_net.v
         yosys > show
@@ -1358,7 +1358,7 @@ endmodule
 
     To perform GLS :
 
-       ```
+       ```bash
        iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v demux_generate_net.v tb_demux_generate.v
        ./a.out
        gtkwave tb_demux_generate.vcd
@@ -1366,30 +1366,30 @@ endmodule
   <p align="center"><img width="1915" height="922" alt="image" src="https://github.com/user-attachments/assets/a0159fa3-c9dc-433f-a13d-4a85e4007a67" /></p>
 
 
-    ## Lecture-53: SKY130RTL D5SK5 L3 Lab For and For Generate part3
+  ## Lecture-53: SKY130RTL D5SK5 L3 Lab For and For Generate part3
 
-    - Working on rca.v :
+  - Working on `rca.v` :
 
       <p align="center"><img width="643" height="358" alt="image" src="https://github.com/user-attachments/assets/a079b7c9-e027-4e2f-bf9b-1f075e37ceb3" /></p>
 
-    ## Lecture-54: SKY130RTL D5SK5 L4 Lab For and For Generate part4
-    ```
+  ## Lecture-54: SKY130RTL D5SK5 L4 Lab For and For Generate part4
+  ```bash
     iverilog fa.v rca.v tb_rca.v
     ./a.out
     gtkwave tb_rca.vcd
-    ```
-    <p align="center"><img width="1918" height="925" alt="image" src="https://github.com/user-attachments/assets/835782d1-bc88-4caf-bc0f-df730d9d42e4" /></p>
+  ```
+  <p align="center"><img width="1918" height="925" alt="image" src="https://github.com/user-attachments/assets/835782d1-bc88-4caf-bc0f-df730d9d42e4" /></p>
 
-    ```
+  ```bash
     yosys
     yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
     yosys > read_verilog  fa.v rca.v
     yosys > synth -top  rca
-    ```
+   ```
 
 <p align="center"><img width="1916" height="875" alt="image" src="https://github.com/user-attachments/assets/301c0b05-6257-4387-85c1-34b9156f751c" /></p>
 
-  ```
+  ```bash
   yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
   yosys > write_verilog -noattr rca_net.v
   yosys > show rca
@@ -1399,11 +1399,11 @@ endmodule
 
   To perform GLS :
 
-    ```
+  ```bash
     iverilog ../my_lib/verilog_model/primitives.v ../my_lib/verilog_model/sky130_fd_sc_hd.v rca_net.v tb_rca.v
     ./a.out
     gtkwave tb_rc.vcd
-    ```
+  ```
   <p align="center"><img width="1913" height="950" alt="image" src="https://github.com/user-attachments/assets/3211a6a9-c908-46e7-a6d1-014d457b5d59" /></p>
   </details>
 
