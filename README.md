@@ -85,26 +85,25 @@ The notes are organized day-wise with:
 
   ## Lecture-4:SKY130RTL D1SK3 L1 Introduction to yosys
   - **Synthesizer** is a tool used for converting the RTL code into the netlist.
-  - The synthesiser tool used here is **"yosys**.
-
+  
   <p align="center"><img width="1870" height="977" alt="image" src="https://github.com/user-attachments/assets/45c79362-888b-4d9c-a13a-205d85e860e7" /></p>
   <p align="center"><img width="1192" height="647" alt="image" src="https://github.com/user-attachments/assets/b00d5f5c-df00-435f-b29d-1339bcd3e470" /></p>
 
    ## Lecture-5: SKY130RTL D1SK3 L2 introduction to logic synthesis part1
   - RTL Design is a behavioural specification of the required design.
-  -  RTL to gate-level synthesis is called as the netlist.
-  -  .lib is the collection/bucket of all the logic cells. (AND, OR, NOT,
+  - RTL to gate-level synthesis is called as the netlist.
+  - .lib is the collection/bucket of all the logic cells. (AND, OR, NOT)
   <p align="center"><img width="895" height="607" alt="image" src="https://github.com/user-attachments/assets/20f16684-c757-4f85-aef9-1cbd9d5a2589" /></p>
 
   - To ensure that there are no hold issues in the circuit, we need cells that work slowly.
 
    ## Lecture-6: SKY130RTL D1SK3 L3 introduction to logic synthesis part2
 
-  - **Setup time** is the time before the clock edge at which the data remains stable.
-  - **Hold time** is the time after the clock edge at which the data remains stable.
-  - Load in the digital circuits are nothing but the capacitances.
-  - Faster charging/discharging with the lesser cell delay.
-  - Wide transistors - more area and power but less delay, whereas narrow transistors- less area and less power but more delay.
+    - **Setup time** is the time before the clock edge at which the data remains stable.
+    - **Hold time** is the time after the clock edge at which the data remains stable.
+    - Load in the digital circuits are nothing but the capacitances.
+    - Faster charging/discharging with the lesser cell delay.
+    - Wide transistors - more area and power but less delay, whereas narrow transistors- less area and less power but more delay.
 
   <p align="center"><img width="906" height="662" alt="image" src="https://github.com/user-attachments/assets/6e1fc570-12b9-4ddd-a696-27f3cbc48a31" /></p>
 
