@@ -27,12 +27,12 @@ The notes are organized day-wise with:
 
 - Begin by creating a folder named `vsdrtlworkshop` and navigate into it to proceed with the subsequent steps.
   
-  ```
+  ```bash
   mkdir vsdrtlworkshop
   cd vsdrtlworkshop
   ```
 - Next, clone the following repository into this directory by running the command below.
-  ```
+  ```bash
   git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
   ```
 - This concludes the lab environment setup on the system.
@@ -57,19 +57,19 @@ The notes are organized day-wise with:
 
   In this lab, `good_mux.v` is simulated, and the code is as follows :
 
-  ```
+  ```bash
   iverilog good_mux.v tb_good_mux.v
   ```
 
   An a.out file will be created
 
-  ```
+  ```bash
   ./a.out
   ```
 
   To view the waveforms on gtkwave :
 
-  ```
+  ```bash
   gtkwave tb_good_mux.vcd
   ```
   The results are as follows :
@@ -78,7 +78,7 @@ The notes are organized day-wise with:
 ## Lecture-3: SKY130RTL D1SK2 L3 Lab2 Introduction iverilog gtkwave part2
   
   To open the code editor :
-  ```
+  ```bash
   gvim tb_good_mux.v -o good_mux.v
   ```
   <p align="center"><img width="1917" height="910" alt="image" src="https://github.com/user-attachments/assets/df150ab4-2cb6-4fe4-8824-f7281cc2b598" /></p>
@@ -110,30 +110,30 @@ The notes are organized day-wise with:
   - **Narrow transistors:** Higher delay, lower area and power.
 
   Commands to run :
-  ```
+  ```bash
   cd verilog_files
   ls
   ```
-  ```
+  ```bash
   yosys
   ```
-  ```
+  ```bash
   yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
   ```
-  ```
+  ```bash
   yosys > read_verilog good_mux.v
   ```
-  ```
+  ```bash
   yosys > synth -top good_mux
   ```
   <p align="center"><img width="990" height="372" alt="image" src="https://github.com/user-attachments/assets/9d8bb860-b25c-4c49-a163-d1695669c188" /></p>
 
-  ```
+  ```bash
   abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
   ```
   The above code (RTL) will be realised in terms of the standard cells from the library.
 
-  ```
+  ```bash
   show
   ```
   The equivalent netlist will be opened.
@@ -148,21 +148,21 @@ The notes are organized day-wise with:
 
    To open the netlist file
 
-   ```
+   ```bash
    yosys > write_verilog good_mux_netlist.v
    ```
 
-   ```
+   ```bash
    yosys > !gvim good_mux_netlist.v
    ```
 
   <p align="center"><img width="1918" height="946" alt="image" src="https://github.com/user-attachments/assets/e9cb9c74-2d0a-43b1-9efb-299a803e7cd9" /></p>
 
-   ```
+   ```bash
    yosys > write_verilog -noattr good_mux_netlist.v
    ```
 
-   ```
+   ```bash
    yosys > !gvim good_mux_netlist.v
    ```
 
@@ -175,7 +175,7 @@ The notes are organized day-wise with:
     
 ## Lecture-10: SKY130RTL D2SK1 L1 Lab4 Introduction to dot Lib part1
 
-  ```
+  ```bash
   gvim ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
   ```
   <p align="center"><img width="1913" height="936" alt="image" src="https://github.com/user-attachments/assets/0f4a0e6a-f729-41cb-9fc8-14939b7f5fd3" /></p>
@@ -193,12 +193,12 @@ The notes are organized day-wise with:
   - unit of time is in **ns**.
   - .lib is the bucket of all the standard cells.
   - To enable line numbers, the command required is  :
-    ```
+    ```bash
     se nu
     ```
   - Consider the following example of **a2111o** :
 
-    ```
+    ```bash
     : sp ../lib/sky130_fd_sc_hd__a2111o.behavioral.v
     ```
 
@@ -207,11 +207,11 @@ The notes are organized day-wise with:
     
 ## Lecture-12: SKY130RTL D2SK1 L3 Lab4 Introduction to dot Lib part3
   - To consider even a simpler example of  **and2_0**
-    ```
+    ```bash
     /cell .*and
     ```
 
-    ```
+    ```bash
     : sp ../lib/sky130_fd_sc_hd__and2.behavioral.v
     ```
 
@@ -222,7 +222,7 @@ The notes are organized day-wise with:
 
   The file used in this lab is the multiple_modules.v
 
-  ```
+  ```bash
   cd verilog_files
   gvim multiple_modules.v
   ```
@@ -231,12 +231,12 @@ The notes are organized day-wise with:
 
   to run yosys for the multiple_modules.v file
 
-  ```
+  ```bash
   cd verilog_files
   yosys
   ```
 
-  ```
+  ```bash
   yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
   yosys > read_verilog multiple_modules.v
   yosys > synth -top multiple_modules
@@ -248,14 +248,14 @@ The notes are organized day-wise with:
 
 
   since there are multiple modules :
-  ```
+  ```bash
   show multiple_modules
   ```
   <p align="center"><img width="1918" height="948" alt="image" src="https://github.com/user-attachments/assets/f9ee3021-670a-4752-bdae-9e3adce6afaa" /></p>
 
   To write the same :
 
-  ```
+  ```bash
   yosys > write_verilog -noattr multiple_modules_hier.v
   yosys > !gvim multiple_modules_hier.v
   ```
@@ -266,7 +266,7 @@ The notes are organized day-wise with:
  
 ## Lecture-14: SKY130RTL D2SK2 L2 Lab05 Hier synthesis flat synthesis part2
 - To flatten out the netlist :
-  ```
+  ```bash
   yosys > flatten
   yosys > write_verilog -noattr multiple_modules.flat.v
   yosys > !gvim multiple_modules.flat.v
@@ -279,7 +279,7 @@ The notes are organized day-wise with:
 
   To perform sub-module synthesis :
 
-  ```
+  ```bash
   yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
   yosys > read_verilog multiple_modules.v
   yosys > synth -top sub_module1
@@ -347,7 +347,7 @@ endmodule
 
  - Asynchronous reset
    
-      ```
+      ```bash
       yosys
       yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > read_verilog dff_asyncres.v
@@ -356,7 +356,7 @@ endmodule
       ```
       <p align="center"><img width="858" height="333" alt="image" src="https://github.com/user-attachments/assets/8f17812d-ecbf-4d1f-ad71-e00732d78542" /></p>
 
-      ```
+      ```bash
       yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > show
       ```
@@ -364,7 +364,7 @@ endmodule
 
     - Asynchronous set
    
-      ```
+      ```bash
       yosys
       yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > read_verilog dff_async_set.v
@@ -373,7 +373,7 @@ endmodule
       ```
       <p align="center"><img width="792" height="297" alt="image" src="https://github.com/user-attachments/assets/9d1ac1bd-b126-4a1d-afab-9a640416cdfa" /></p>
 
-      ```
+      ```bash
       yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > show
       ```
@@ -381,7 +381,7 @@ endmodule
 
     -  Synchronous set
    
-      ```
+      ```bash
       yosys
       yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > read_verilog dff_syncres.v
@@ -390,7 +390,7 @@ endmodule
       ```
       <p align="center"><img width="567" height="297" alt="image" src="https://github.com/user-attachments/assets/a9ed02bd-2999-4863-b615-64fbe65aa64b" /></p>
 
-      ```
+      ```bash
       yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > show
       ```
@@ -406,9 +406,9 @@ endmodule
         output y[3:0] is simply {a,0} - multiplication by 2
         output y[4:0] is simply {a,0,0} -multipliation by 4
 
-      - Multiplication by 2 :
+    - Multiplication by 2 :
 
-      ```
+      ```bash
       yosys
       yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > read_verilog mult_2.v
@@ -416,20 +416,20 @@ endmodule
       ```
      <p align="center"><img width="872" height="326" alt="image" src="https://github.com/user-attachments/assets/0c8dd276-a542-4604-87aa-c4c2314cbcc9" /></p>
 
-      ```
+      ```bash
       yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       ```
 
      <p align="center"><img width="867" height="187" alt="image" src="https://github.com/user-attachments/assets/ca3edc3f-85cc-4a43-8871-31818bc6e551" /></p>
 
-      ```
+      ```bash
       show
       ```
 
      <p align="center"><img width="1917" height="965" alt="image" src="https://github.com/user-attachments/assets/737d464a-bb1e-452a-a162-c437e6bcaf3d" /></p>
   
     - To view netlist :
-      ```
+      ```bash
       yosys > write_verilog -noattr mul2_net.v
       yosys > !gvim mul2_net.v
       ```
@@ -442,7 +442,7 @@ endmodule
 
       <p align="center"><img width="1255" height="708" alt="image" src="https://github.com/user-attachments/assets/52b32357-32bc-4149-91f4-e0fc41f694d7" /></p>
 
-      ```
+      ```bash
       yosys
       yosys > read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       yosys > read_verilog mult_8.v
@@ -450,20 +450,20 @@ endmodule
       ```
       <p align="center"><img width="785" height="318" alt="image" src="https://github.com/user-attachments/assets/e08d4562-d479-4c14-b216-b17da6339306" /></p>
 
-      ```
+      ```bash
       yosys > abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
       ```
 
       <p align="center"><img width="747" height="147" alt="image" src="https://github.com/user-attachments/assets/52493937-4ce4-41f1-983d-297d843ebe43" /></p>
 
-      ```
+      ```bash
       show
       ```
 
       <p align="center"><img width="1918" height="998" alt="image" src="https://github.com/user-attachments/assets/039b4dda-b03f-431f-81b4-ef87c4abf5a5" /></p>
 
     - To view netlist :
-      ```
+      ```bash
       yosys > write_verilog -noattr mult8_net.v
       yosys > !gvim mult8_net.v
       ```
@@ -488,15 +488,15 @@ endmodule
     <p align="center"><img width="1280" height="572" alt="image" src="https://github.com/user-attachments/assets/03236db9-4b37-467f-a846-0c151c5978fe" /></p>
     <p align="center"><img width="1440" height="1600" alt="image" src="https://github.com/user-attachments/assets/a014f4be-6a04-495a-9fa1-f90d7db4fe4b" /></p>
 
-   ## Lecture-23: SKY130RTL D3SK1 L3 Introduction to optimisations part3
+  ## Lecture-23: SKY130RTL D3SK1 L3 Introduction to optimisations part3
 
-    <p align="center"><img width="1842" height="1028" alt="image" src="https://github.com/user-attachments/assets/78125807-b9b6-4f70-8807-9b419a289272" /></p>
+  <p align="center"><img width="1842" height="1028" alt="image" src="https://github.com/user-attachments/assets/78125807-b9b6-4f70-8807-9b419a289272" /></p>
 
-    - This involves partitioning some portion of the logic by pushing it further.
+  - This involves partitioning some portion of the logic by pushing it further.
 
-    ## Lecture-24: SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1
+  ## Lecture-24: SKY130RTL D3SK2 L1 Lab06 Combinational Logic Optimisations part1
 
-    - Working on opt_check.v (and gate after optimisation)
+  - Working on opt_check.v (and gate after optimisation)
 
       ```
       yosys
@@ -528,9 +528,9 @@ endmodule
        <p align="center"><img width="1918" height="885" alt="image" src="https://github.com/user-attachments/assets/ea1f5821-c4c3-47b6-bd7c-c115f6bc0d63" /></p>
 
 
-       ## Lecture-25: SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2
+   ## Lecture-25: SKY130RTL D3SK2 L2 Lab06 Combinational Logic Optimisations part2
 
-     - Working on opt_check3.v (3 input AND gate after optimisation)
+   - Working on opt_check3.v (3 input AND gate after optimisation)
 
       ```
       yosys
@@ -538,7 +538,7 @@ endmodule
       yosys > read_verilog opt_check3.v
       yosys > synth -top opt_check3
       ```
-    <p align="center"><img width="645" height="363" alt="image" src="https://github.com/user-attachments/assets/c200e65b-127f-43d8-9757-a5a065935c9e" /></p>
+     <p align="center"><img width="645" height="363" alt="image" src="https://github.com/user-attachments/assets/c200e65b-127f-43d8-9757-a5a065935c9e" /></p>
     
      - To optimise it :
      
@@ -554,15 +554,15 @@ endmodule
       show
       ```
 
-  <p align="center"><img width="1918" height="927" alt="image" src="https://github.com/user-attachments/assets/e235a70a-7817-44c3-9818-c6855fd0e3de" /></p>
+     <p align="center"><img width="1918" height="927" alt="image" src="https://github.com/user-attachments/assets/e235a70a-7817-44c3-9818-c6855fd0e3de" /></p>
 
-    - Working on opt_check4.v (XNOR of A and C)
+  - Working on opt_check4.v (XNOR of A and C)
 
      <p align="center"> <img width="625" height="376" alt="image" src="https://github.com/user-attachments/assets/3c2362cd-0e8d-48f7-a600-13875262f9f4" /></p>
 
      <p align="center"><img width="1918" height="953" alt="image" src="https://github.com/user-attachments/assets/8bb10e48-a59b-4d88-85cd-d8af6e91ee7c" /></p>
 
-    - Working on multiple_modules_opt.v (a21o gate)
+  - Working on multiple_modules_opt.v (a21o gate)
  
       ```
       yosys
@@ -616,15 +616,15 @@ endmodule
 
         <p align="center"><img width="1915" height="897" alt="image" src="https://github.com/user-attachments/assets/435ac7ed-2405-4c03-85ba-ec94d53a5b6c" /></p>
 
-      ## Lecture-26: SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1
+   ## Lecture-26: SKY130RTL D3SK3 L1 Lab07 Sequential Logic Optimisations part1
 
-      - Working on dff_const1.v :
+   - Working on dff_const1.v :
 
-        ```
-        iverilog tb_dfF_const1.v dff_const1.v
-        ./a.out
-        gtkwave tb_dff_const1.vcd
-        ```
+     ```
+     iverilog tb_dfF_const1.v dff_const1.v
+     ./a.out
+     gtkwave tb_dff_const1.vcd
+     ```
         <p align="center"><img width="1915" height="933" alt="image" src="https://github.com/user-attachments/assets/f5cae4d4-1270-4116-8479-23f0dbba789b" /></p>
  
       ```
@@ -633,29 +633,29 @@ endmodule
       yosys > read_verilog dff_const1.v
       yosys > synth -top dff_const1
       ```
-      <p align="center"><img width="598" height="248" alt="image" src="https://github.com/user-attachments/assets/1bd9a9e6-0ead-4e22-ae90-2da85d13733b" /></p>
+        <p align="center"><img width="598" height="248" alt="image" src="https://github.com/user-attachments/assets/1bd9a9e6-0ead-4e22-ae90-2da85d13733b" /></p>
  
       ```
       yosys > dfflibmap -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
       ```
  
-      <p align="center"><img width="1027" height="612" alt="image" src="https://github.com/user-attachments/assets/6050bcd7-42dc-4d9e-8393-b60478d0c873" /></p>
+        <p align="center"><img width="1027" height="612" alt="image" src="https://github.com/user-attachments/assets/6050bcd7-42dc-4d9e-8393-b60478d0c873" /></p>
  
       ```
       show
       ```
-      <p align="center"><img width="1916" height="946" alt="image" src="https://github.com/user-attachments/assets/8d4359de-7777-467f-b05c-75a8188f0df0" /></p>
+        <p align="center"><img width="1916" height="946" alt="image" src="https://github.com/user-attachments/assets/8d4359de-7777-467f-b05c-75a8188f0df0" /></p>
  
 
-      ## Lecture-27: SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2
+   ## Lecture-27: SKY130RTL D3SK3 L2 Lab07 Sequential Logic Optimisations part2
 
-      - Working on dff_const2.v :
+   - Working on dff_const2.v :
 
-        ```
-        iverilog tb_dfF_const2.v dff_const2.v
-        ./a.out
-        gtkwave tb_dff_const2.vcd
-        ```
+     ```
+     iverilog tb_dfF_const2.v dff_const2.v
+     ./a.out
+     gtkwave tb_dff_const2.vcd
+     ```
         <p align="center"><img width="1916" height="917" alt="image" src="https://github.com/user-attachments/assets/74775511-b0d3-406c-a7af-d235bfc1d06d" /></p>
 
       ```
@@ -675,17 +675,17 @@ endmodule
  
       <p align="center"><img width="1916" height="960" alt="image" src="https://github.com/user-attachments/assets/caa7b632-57c1-4e60-b8f7-2bb16cfb2abd" /></p>
 
-      ## Lecture-28: SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3
+  ## Lecture-28: SKY130RTL D3SK3 L3 Lab07 Sequential Logic Optimisations part3
 
-     - Working on dff_const3.v
+   - Working on dff_const3.v
 
-       ```
-        iverilog tb_dfF_const3.v dff_const3.v
-        ./a.out
-        gtkwave tb_dff_const3.vcd
-       ```
+     ```
+     iverilog tb_dfF_const3.v dff_const3.v
+     ./a.out
+     gtkwave tb_dff_const3.vcd
+     ```
 
-        <p align="center"><img width="1917" height="918" alt="image" src="https://github.com/user-attachments/assets/4d355a59-b531-4e1a-b62c-392e9bd90801" /></p>
+      <p align="center"><img width="1917" height="918" alt="image" src="https://github.com/user-attachments/assets/4d355a59-b531-4e1a-b62c-392e9bd90801" /></p>
 
      ```
       yosys
@@ -693,25 +693,25 @@ endmodule
       yosys > read_verilog dff_const3.v
       yosys > synth -top dff_const3
      ```
-  <p align="center"><img width="557" height="286" alt="image" src="https://github.com/user-attachments/assets/55904c48-aec4-477e-ac3f-5f57e8c2efe9" /></p>
+      <p align="center"><img width="557" height="286" alt="image" src="https://github.com/user-attachments/assets/55904c48-aec4-477e-ac3f-5f57e8c2efe9" /></p>
 
-   ```
+     ```
       yosys > dfflibmap -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
       yosys > abc -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
       yosys > show
-   ```
+     ```
 
-  <p align="center"><img width="1913" height="927" alt="image" src="https://github.com/user-attachments/assets/4a6cf95f-8c34-4f46-9ad5-277e00b6c037" /></p>
+      <p align="center"><img width="1913" height="927" alt="image" src="https://github.com/user-attachments/assets/4a6cf95f-8c34-4f46-9ad5-277e00b6c037" /></p>
 
   - Working on dff_const4.v
 
-    ```
-        iverilog tb_dfF_const4.v dff_const4.v
-        ./a.out
-        gtkwave tb_dff_const4.vcd
+     ```
+     iverilog tb_dfF_const4.v dff_const4.v
+     ./a.out
+     gtkwave tb_dff_const4.vcd
      ```
 
-    <p align="center"><img width="1918" height="927" alt="image" src="https://github.com/user-attachments/assets/8464fb60-c830-4db7-8571-1cf57541445e" /></p>
+      <p align="center"><img width="1918" height="927" alt="image" src="https://github.com/user-attachments/assets/8464fb60-c830-4db7-8571-1cf57541445e" /></p>
 
       ```
       yosys
@@ -719,15 +719,14 @@ endmodule
       yosys > read_verilog dff_const4.v
       yosys > synth -top dff_const4
       ```
-  <p align="center"><img width="506" height="246" alt="image" src="https://github.com/user-attachments/assets/289ad699-ea58-4af6-a9a4-d1dc4ed2d7df" /></p>
+      <p align="center"><img width="506" height="246" alt="image" src="https://github.com/user-attachments/assets/289ad699-ea58-4af6-a9a4-d1dc4ed2d7df" /></p>
 
   Since no flop is required : 
-
-   ```
+      ```
       yosys > abc -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
       yosys > show
-   ```
-  <p align="center"><img width="1918" height="928" alt="image" src="https://github.com/user-attachments/assets/d9647f98-b097-4a17-bb35-ac0cd658e45a" /></p>
+      ```
+     <p align="center"><img width="1918" height="928" alt="image" src="https://github.com/user-attachments/assets/d9647f98-b097-4a17-bb35-ac0cd658e45a" /></p>
 
   - Working on dff_const3.v
 
@@ -745,16 +744,16 @@ endmodule
       yosys > read_verilog dff_const3.v
       yosys > synth -top dff_const3
     ```
-  <p align="center"><img width="558" height="272" alt="image" src="https://github.com/user-attachments/assets/bc417747-3093-4351-ab16-e1a588e717b1" /></p>
+    <p align="center"><img width="558" height="272" alt="image" src="https://github.com/user-attachments/assets/bc417747-3093-4351-ab16-e1a588e717b1" /></p>
 
-  ```
+    ```
       yosys > dfflibmap -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
       yosys > abc -liberty ../lib/sky130-fd_sc_hd__tt_025C_1v80.lib
       yosys > show
-   ```
-  <p align="center"><img width="1918" height="922" alt="image" src="https://github.com/user-attachments/assets/060f8ddd-57dc-40e0-a148-f05d4e1a242e" /></p>
+    ```
+    <p align="center"><img width="1918" height="922" alt="image" src="https://github.com/user-attachments/assets/060f8ddd-57dc-40e0-a148-f05d4e1a242e" /></p>
 
-    ## Lecture-29: SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1
+  ## Lecture-29: SKY130RTL D3SK4 L1 Seq optimisation unused outputs part1
 
     - Working on 3-bit up counter (counter_opt.v with q=count[0])
 
