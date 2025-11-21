@@ -26,61 +26,36 @@ The notes are organized day-wise with:
 ## 3. Environment Setup (On Ubuntu via terminal)
 
 - Begin by creating a folder named `vsdrtlworkshop` and navigate into it to proceed with the subsequent steps.
+  
   ```
   mkdir vsdrtlworkshop
   cd vsdrtlworkshop
   ```
-- Next,clone the following repository into this directory by running the command below.
+- Next, clone the following repository into this directory by running the command below.
   ```
   git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
   ```
 - This concludes the lab environment setup on the system.
 
-## 4. Day-wise Labs & Learnings 
-
-
-
-  
-  
-
-
-
-
-
- 
- 
-
- 
-
- 
-
-
-
-
-
-
-
-
-</details>
+## 4. Day-wise Labs & Learnings
 <details>
-  <summary>DAY-1</summary>
+  <summary><strong>DAY-1</strong></summary>
   
   ## Lecture-0: SKY130RTL D1SK1 L1 Introduction to iverilog design test bench
   
 - **RTL design** simulator is a tool used for verifying the functionality of the design.
 - **Design** is the actual module that is implemented, whereas the **testbench** is for verifying the design by considering various test cases.
-- In this course, the simulator used is "**iverilog**" and the waveform viewer is the "**gtkwave**".
+- VCD stands for "**value change dump**"
 - Iverilog-based simulation flow :
   <p align="center"> <img width="838" height="417" alt="image" src="https://github.com/user-attachments/assets/8027cbb8-3c6c-4ebb-a015-a056333254cc" /> </p>
 
   ## Lecture-1: SKY130RTL D1SK2 L1 Lab1 introduction to lab
   Installation and cloning of all the necessary repositories required for running the labs. A folder named vsdrtlworkshop is created, and the sky130RTLSynthesisAndDesign repository is cloned into it.
-
   <p align="center"> <img width="1918" height="917" alt="image" src="https://github.com/user-attachments/assets/25a2f94e-867d-45f0-b1ca-9f98a97c0932" /> </p>
 
-  ## Lecture-2: SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1
+  ## Lecture-2: SKY130RTL D1SK2 L2 Lab2 Introduction iverilog gtkwave part1 (Lab 1)
 
-  In this lab, a good_mux.v is simulated, and the code is as follows :
+  In this lab, `good_mux.v` is simulated, and the code is as follows :
 
   ```
   iverilog good_mux.v tb_good_mux.v
@@ -92,26 +67,20 @@ The notes are organized day-wise with:
   ./a.out
   ```
 
-  to view the waveforms on gtkwave :
+  To view the waveforms on gtkwave :
 
   ```
   gtkwave tb_good_mux.vcd
   ```
-
-  VCD stands for "**value change dump**"
-
   The results are as follows :
-
-  <p align="center"><img width="1916" height="553" alt="image" src="https://github.com/user-attachments/assets/12897415-a163-4b8f-9648-24d24eeaf3a1" /></p>
-
   <p align="center"><img width="1917" height="918" alt="image" src="https://github.com/user-attachments/assets/a4e3ac22-84c1-4e68-b2ab-85ce11b5e765" /></p>
 
   ## Lecture-3: SKY130RTL D1SK2 L3 Lab2 Introduction iverilog gtkwave part2
+  
   To open the code editor :
   ```
   gvim tb_good_mux.v -o good_mux.v
   ```
-  <p align="center"><img width="1917" height="598" alt="image" src="https://github.com/user-attachments/assets/537d2470-1d46-4a71-ac06-3399eab31002" /></p>
   <p align="center"><img width="1917" height="910" alt="image" src="https://github.com/user-attachments/assets/df150ab4-2cb6-4fe4-8824-f7281cc2b598" /></p>
 
   ## Lecture-4:SKY130RTL D1SK3 L1 Introduction to yosys
